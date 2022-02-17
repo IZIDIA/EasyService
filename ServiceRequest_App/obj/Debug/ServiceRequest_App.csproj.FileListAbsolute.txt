@@ -1,0 +1,486 @@
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe.config
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.pdb
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csprojAssemblyReference.cache
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.g.cs
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\App.g.cs
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.cache
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.lref
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.baml
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.g.resources
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.Properties.Resources.resources
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.GenerateResource.cache
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CoreCompileInputs.cache
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe
+C:\Users\CHUWI\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.pdb
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.AssemblyReference.cache
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\App.g.cs
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.cache
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.pdb
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.g.cs
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.lref
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe.config
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.pdb
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.baml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.g.resources
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.Properties.Resources.resources
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.GenerateResource.cache
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CoreCompileInputs.cache
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CopyComplete
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.g.cs
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.baml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\netstandard.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.AppContext.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Specialized.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Console.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Data.Common.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Pipes.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Expressions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Parallel.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Queryable.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Http.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NameResolution.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Ping.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Requests.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Security.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Sockets.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ObjectModel.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Reader.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Writer.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Handles.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Claims.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Principal.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.SecureString.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Thread.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Timer.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ValueTuple.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XDocument.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Zstandard.Net.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.pdb
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe.config
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KarpovDV\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe.config
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.pdb
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\netstandard.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.AppContext.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Specialized.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Console.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Data.Common.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Pipes.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Expressions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Parallel.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Queryable.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Http.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NameResolution.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Ping.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Requests.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Security.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Sockets.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ObjectModel.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Reader.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Writer.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Handles.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Claims.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Principal.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.SecureString.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Thread.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Timer.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ValueTuple.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XDocument.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Zstandard.Net.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.pdb
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csprojAssemblyReference.cache
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe.config
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.g.cs
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.g.cs
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\App.g.cs
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.cache
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.lref
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.baml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.baml
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.g.resources
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.Properties.Resources.resources
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.GenerateResource.cache
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CoreCompileInputs.cache
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CopyComplete
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe
+C:\Users\FIN\Desktop\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.pdb
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe.config
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.exe
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ServiceRequest_App.pdb
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Microsoft.Win32.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\netstandard.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.AppContext.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Concurrent.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.NonGeneric.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Collections.Specialized.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ComponentModel.TypeConverter.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Console.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Data.Common.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Contracts.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Debug.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Process.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.StackTrace.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tools.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.TraceSource.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Diagnostics.Tracing.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Drawing.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Dynamic.Runtime.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Calendars.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Globalization.Extensions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Compression.ZipFile.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.FileSystem.Watcher.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.IsolatedStorage.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.MemoryMappedFiles.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.Pipes.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Expressions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Parallel.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Linq.Queryable.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Http.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NameResolution.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.NetworkInformation.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Ping.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Requests.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Security.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.Sockets.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebHeaderCollection.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.Client.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Net.WebSockets.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ObjectModel.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Extensions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Reflection.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Reader.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.ResourceManager.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Resources.Writer.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Extensions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Handles.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Numerics.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Formatters.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Json.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.Serialization.Xml.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Claims.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Algorithms.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Csp.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Encoding.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.Primitives.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.Principal.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Security.SecureString.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.Encoding.Extensions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Text.RegularExpressions.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Overlapped.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Tasks.Parallel.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Thread.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.ThreadPool.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Threading.Timer.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.ValueTuple.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.ReaderWriter.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XDocument.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlDocument.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XmlSerializer.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Xml.XPath.XDocument.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\BouncyCastle.Crypto.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\OpenHardwareMonitorLib.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Ubiety.Dns.Core.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Xceed.Wpf.Toolkit.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Zstandard.Net.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.pdb
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Google.Protobuf.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Compression.LZ4.Streams.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\K4os.Hash.xxHash.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\MySql.Data.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\Newtonsoft.Json.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Buffers.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Memory.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Numerics.Vectors.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe.config
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.g.cs
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.g.cs
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\App.g.cs
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.cache
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App_MarkupCompile.lref
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\MainWindow.baml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\PhoneWindow.baml
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.g.resources
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.Properties.Resources.resources
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.GenerateResource.cache
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CoreCompileInputs.cache
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.CopyComplete
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.exe
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.pdb
+G:\Универ\ПРАКТИКА 2021\ServiceRequest_App\ServiceRequest_App\obj\Debug\ServiceRequest_App.csproj.AssemblyReference.cache
