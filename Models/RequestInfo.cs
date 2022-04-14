@@ -70,5 +70,11 @@ namespace EasyService {
 
 		[JsonPropertyName("beauty_created_at")]
 		public string CreatedAt { get; set; }
+
+		public string Icon { get; set; }
+
+		public string IconColor { get; set; }
+
+		public string IdName { get; set; }
 	}
 }

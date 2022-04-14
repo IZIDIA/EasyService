@@ -1,0 +1,37 @@
+﻿<UserControl
+	x:Class="EasyService.Views.Welcome"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+	xmlns:local="clr-namespace:EasyService"
+	xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	MaxWidth="580"
+	d:DataContext="{d:DesignInstance local:MainWindowViewModel}"
+	d:DesignHeight="800"
+	d:DesignWidth="580"
+	mc:Ignorable="d">
+
+	<Grid
+		Margin="10"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center">
+		<StackPanel>
+			<iconPacks:PackIconMaterial
+				Width="40"
+				Height="40"
+				HorizontalAlignment="Center"
+				Foreground="White"
+				Kind="CommentAlertOutline" />
+			<Label>
+				<TextBlock
+					Width="400"
+					FontSize="16"
+					Text="{Binding WelcomeText}"
+					TextAlignment="Center"
+					TextWrapping="Wrap" />
+			</Label>
+		</StackPanel>
+	</Grid>
+</UserControl>
