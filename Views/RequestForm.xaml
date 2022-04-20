@@ -3,13 +3,168 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:local="clr-namespace:EasyService.Views"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+	xmlns:local="clr-namespace:EasyService"
+	xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	MaxWidth="580"
+	d:DataContext="{d:DesignInstance local:MainWindowViewModel}"
 	d:DesignHeight="800"
-	d:DesignWidth="600"
+	d:DesignWidth="580"
+	FontSize="14"
 	mc:Ignorable="d">
-
+	<UserControl.Resources>
+		<Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+		<Style x:Key="MainLabel" TargetType="Label">
+			<Setter Property="Padding" Value="0,0,0,3" />
+		</Style>
+		<Style x:Key="RequiredField" TargetType="Label">
+			<Setter Property="Padding" Value="3,0,0,0" />
+			<Setter Property="FontSize" Value="12" />
+			<Setter Property="Foreground" Value="#d93025" />
+		</Style>
+		<Style x:Key="TextMuted" TargetType="Label">
+			<Setter Property="Padding" Value="5,1,0,0" />
+			<Setter Property="FontSize" Value="12" />
+			<Setter Property="Foreground" Value="#6c757d" />
+		</Style>
+		<Style x:Key="InputFieldStack" TargetType="StackPanel">
+			<Setter Property="Margin" Value="0,0,0,10" />
+		</Style>
+		<Style x:Key="InputFieldDock" TargetType="DockPanel">
+			<Setter Property="Margin" Value="0,0,0,10" />
+		</Style>
+		<Style x:Key="MorningTime" TargetType="mah:TimePicker">
+			<Setter Property="Width" Value="70" />
+			<Setter Property="Height" Value="1" />
+			<Setter Property="mah:TextBoxHelper.Watermark" Value="--:--" />
+			<Setter Property="Culture" Value="ru" />
+			<Setter Property="SelectedDateTime" Value="09:00" />
+			<Setter Property="SelectedTimeFormat" Value="Short" />
+		</Style>
+		<Style x:Key="EveningTime" TargetType="mah:TimePicker">
+			<Setter Property="Width" Value="70" />
+			<Setter Property="Height" Value="1" />
+			<Setter Property="mah:TextBoxHelper.Watermark" Value="--:--" />
+			<Setter Property="Culture" Value="ru" />
+			<Setter Property="SelectedDateTime" Value="18:00" />
+			<Setter Property="SelectedTimeFormat" Value="Short" />
+		</Style>
+	</UserControl.Resources>
 	<Grid>
-		<TextBlock Text="Form" />
+		<StackPanel Margin="50,5,50,0" Orientation="Vertical">
+			<StackPanel>
+				<mah:ToggleSwitch Content="Анонимная заявка" IsOn="{Binding EnableAnonym}" />
+			</StackPanel>
+			<DockPanel LastChildFill="False" Style="{StaticResource InputFieldDock}">
+				<StackPanel Width="220" DockPanel.Dock="Left">
+					<StackPanel Orientation="Horizontal">
+						<Label Content="Имя" Style="{StaticResource MainLabel}" />
+						<Label Content="*" Style="{StaticResource RequiredField}" />
+					</StackPanel>
+					<TextBox />
+				</StackPanel>
+				<StackPanel Width="220" DockPanel.Dock="Right">
+					<StackPanel Orientation="Horizontal">
+						<Label Content="Фамилия" Style="{StaticResource MainLabel}" />
+						<Label Content="*" Style="{StaticResource RequiredField}" />
+					</StackPanel>
+					<TextBox />
+				</StackPanel>
+			</DockPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Email" Style="{StaticResource MainLabel}" />
+					<Label Content="*" Style="{StaticResource RequiredField}" />
+				</StackPanel>
+				<TextBox />
+			</StackPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Местонахождение оборудования" Style="{StaticResource MainLabel}" />
+					<Label Content="*" Style="{StaticResource RequiredField}" />
+				</StackPanel>
+				<TextBox mah:TextBoxHelper.Watermark="Здание, комната (кабинет)..." />
+			</StackPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Контактный номер" Style="{StaticResource MainLabel}" />
+					<Label Content="*" Style="{StaticResource RequiredField}" />
+					<Label Content="(Пример: 89991234455 или 79991234455)" Style="{StaticResource TextMuted}" />
+				</StackPanel>
+				<TextBox mah:TextBoxHelper.Watermark="Мобильный или рабочий..." />
+			</StackPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Инвентарный номер оборудования" Style="{StaticResource MainLabel}" />
+					<Label Content="(Если имеется)" Style="{StaticResource TextMuted}" />
+				</StackPanel>
+				<TextBox mah:TextBoxHelper.Watermark="Номер, для ведения учета..." />
+			</StackPanel>
+			<Separator Margin="0,20,0,10" />
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel.Resources>
+					<Style BasedOn="{StaticResource MahApps.Styles.RadioButton}" TargetType="{x:Type RadioButton}">
+						<Setter Property="Margin" Value="{StaticResource ControlMargin}" />
+					</Style>
+				</StackPanel.Resources>
+				<Label Content="Решить проблему в вашем присутствии?" Style="{StaticResource MainLabel}" />
+				<RadioButton
+					Content="Неважно"
+					GroupName="G1"
+					IsChecked="True"
+					IsEnabled="True" />
+				<RadioButton
+					Content="Да, решить проблему в моём присутствии"
+					GroupName="G1"
+					IsChecked="False"
+					IsEnabled="True" />
+				<RadioButton
+					Content="Нет, решить проблему в моё отсутствие"
+					GroupName="G1"
+					IsChecked="False"
+					IsEnabled="True" />
+			</StackPanel>
+			<StackPanel x:Name="WorkTime" Style="{StaticResource InputFieldStack}">
+				<StackPanel>
+					<Label Padding="0" Content="График вашей работы:" />
+					<Label Padding="0,0,0,10" Style="{StaticResource TextMuted}">
+						<TextBlock Text="(Если график не получается задать по шаблону, сообщите о нём в тексте заявки)" TextWrapping="Wrap" />
+					</Label>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<StackPanel.Resources>
+						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+					</StackPanel.Resources>
+					<CheckBox x:Name="MondayCheck" Content="Понедельник" />
+					<StackPanel x:Name="MondayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
+							<Label VerticalAlignment="Center" Content="С:" />
+							<mah:TimePicker x:Name="MondayFrom" Style="{StaticResource MorningTime}" />
+						</StackPanel>
+						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+							<Label VerticalAlignment="Center" Content="До:" />
+							<mah:TimePicker x:Name="MondayTo" Style="{StaticResource EveningTime}" />
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<StackPanel.Resources>
+						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+					</StackPanel.Resources>
+					<CheckBox x:Name="TuesdayCheck" Content="Вторник" />
+					<StackPanel x:Name="TuesdayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
+							<Label VerticalAlignment="Center" Content="С:" />
+							<mah:TimePicker x:Name="TuesdayFrom" Style="{StaticResource MorningTime}" />
+						</StackPanel>
+						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+							<Label VerticalAlignment="Center" Content="До:" />
+							<mah:TimePicker x:Name="TuesdayTo" Style="{StaticResource EveningTime}" />
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
 	</Grid>
 </UserControl>

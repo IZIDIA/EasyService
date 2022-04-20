@@ -85,7 +85,7 @@
 						x:Name="RequestsList"
 						Grid.Row="1"
 						Margin="5,5,5,0"
-						BorderBrush="{DynamicResource MahApps.Brushes.Accent3}"
+						BorderBrush="Transparent"
 						BorderThickness="1"
 						SelectionChanged="RequestsListSelectionChanged">
 						<ListBox.ItemTemplate>
@@ -247,7 +247,7 @@
 			<Grid Grid.Row="1">
 				<Border
 					Margin="0,5,10,0"
-					BorderBrush="Red"
+					BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
 					BorderThickness="0.5">
 					<Grid>
 						<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">

@@ -26,37 +26,34 @@ using System.Diagnostics;
 
 namespace EasyService {
 	public partial class MainWindow : MetroWindow {
-		string addres = "http://laravelproject";
-		string mac = HelperMethods.GetBeautiMacAddress();
-		string cheker = "accdede43f326c52d88d62b98de5e940";
+		readonly string addres = "http://laravelproject";
+		readonly string mac = HelperMethods.GetBeautiMacAddress();
+		readonly string cheker = "accdede43f326c52d88d62b98de5e940";
 		public ObservableCollection<RequestInfo> Requests;
+		private ProgressDialogController controller;
+		private readonly MainWindowViewModel viewModel;
+		bool launch = false;
+
 		public MainWindow() {
 			InitializeComponent();
-			//DataContext = new MainWindowViewModel();
-			this.mainContentControl.Content = new Views.Welcome();
-			ipv4.Text = "IP: " + HelperMethods.GetIPv4();
-			hostName.Text = "Host: " + Dns.GetHostName();
+			viewModel = (MainWindowViewModel)DataContext;
 			LaunchApp();
 		}
 		public async void LaunchApp() {
-			try {
-				HttpClient client = new HttpClient();
-				client.DefaultRequestHeaders.Add("Checker", cheker);
-				var responseBody = await client.GetStringAsync($"{addres}/api/v1/info");
-				var requestsFromJson = JsonSerializer.Deserialize<Options>(responseBody);
-				var viewModel = (MainWindowViewModel)DataContext;
-				viewModel.WelcomeText = requestsFromJson.WelcomeTextApp;
-				this.Title = requestsFromJson.CompanyName;
-				RefreshRequestsList();
-			}
-			catch {
-				await this.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
-			}
+			controller = await this.ShowProgressAsync("Загрузка приложения", "Пожалуйста подождите...");
+			ipv4.Text = "IP: " + HelperMethods.GetIPv4();
+			hostName.Text = "Host: " + Dns.GetHostName();
+			await RefreshWelcomePageAndRequestsList();
+			mainContentControl.Content = new Views.Welcome();
+		//	await controller.CloseAsync();
 		}
-		public async void RefreshRequestsList() {
+		public async Task RefreshWelcomePageAndRequestsList() {
 			Refresh_Button.IsEnabled = false;
+			if (!launch) {
+				GetWelcomeText();
+			}
 			try {
-				HttpClient client = new HttpClient();
+				var client = new HttpClient();
 				client.DefaultRequestHeaders.Add("Checker", cheker);
 				var responseBody = await client.GetStringAsync($"{addres}/api/v1/{mac}/requests");
 				var requestsFromJson = JsonSerializer.Deserialize<List<RequestInfo>>(responseBody);
@@ -106,40 +103,67 @@ namespace EasyService {
 					}
 				}
 				RequestsList.ItemsSource = Requests;
+				launch = true;
+				if (controller.IsOpen) {
+					await controller.CloseAsync();
+				}
 			}
 			catch {
-				await this.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
+				if (controller.IsOpen) {
+					await controller.CloseAsync();
+				}
+				_ = await this.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
+				ShowNetworkProblem();
+				launch = false;
 			}
 			Refresh_Button.IsEnabled = true;
+		}
+		public async void GetWelcomeText() {
+			try {
+				var client = new HttpClient();
+				client.DefaultRequestHeaders.Add("Checker", cheker);
+				var responseBody = await client.GetStringAsync($"{addres}/api/v1/info");
+				var requestsFromJson = JsonSerializer.Deserialize<Options>(responseBody);
+				viewModel.WelcomeText = requestsFromJson.WelcomeTextApp;
+				viewModel.WelcomeIconType = "CommentAlertOutline";
+				viewModel.WelcomeIconColor = "#ffffff";
+				Title = requestsFromJson.CompanyName;
+			}
+			catch { }
+		}
+		public void ShowNetworkProblem() {
+			viewModel.WelcomeText = "Отсутствует соединение с сервером";
+			viewModel.WelcomeIconType = "AlertOutline";
+			viewModel.WelcomeIconColor = "#e8b600";
 		}
 		public void RequestsListSelectionChanged(object sender, SelectionChangedEventArgs e) {
 
 		}
 
 		private void Button_Refresh_Click(object sender, RoutedEventArgs e) {
-			RefreshRequestsList();
+			_ = RefreshWelcomePageAndRequestsList();
 		}
 
 		private void Button_Phone_Click(object sender, RoutedEventArgs e) {
-			Process.Start("explorer.exe", addres + "/contacts");
+			_ = Process.Start("explorer.exe", addres + "/contacts");
 		}
 		private void Button_Doc_Click(object sender, RoutedEventArgs e) {
-			Process.Start("explorer.exe", addres + "/docs");
+			_ = Process.Start("explorer.exe", addres + "/docs");
 		}
 		private void Button_Web_Click(object sender, RoutedEventArgs e) {
-			Process.Start("explorer.exe", addres);
+			_ = Process.Start("explorer.exe", addres);
 		}
 
 		private void Button_Create_Click(object sender, RoutedEventArgs e) {
-			this.mainContentControl.Content = new Views.RequestForm();
-			this.Button_Create.Visibility = Visibility.Hidden;
-			this.Button_Close.Visibility = Visibility.Visible;
+			mainContentControl.Content = new Views.RequestForm();
+			Button_Create.Visibility = Visibility.Hidden;
+			Button_Close.Visibility = Visibility.Visible;
 		}
 
 		private void Button_Close_Click(object sender, RoutedEventArgs e) {
-			this.mainContentControl.Content = new Views.Welcome();
-			this.Button_Create.Visibility = Visibility.Visible;
-			this.Button_Close.Visibility = Visibility.Hidden;
+			mainContentControl.Content = new Views.Welcome();
+			Button_Create.Visibility = Visibility.Visible;
+			Button_Close.Visibility = Visibility.Hidden;
 		}
 	}
 }

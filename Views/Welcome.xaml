@@ -22,8 +22,8 @@
 				Width="40"
 				Height="40"
 				HorizontalAlignment="Center"
-				Foreground="White"
-				Kind="CommentAlertOutline" />
+				Foreground="{Binding WelcomeIconColor}"
+				Kind="{Binding WelcomeIconType}" />
 			<Label>
 				<TextBlock
 					Width="400"
