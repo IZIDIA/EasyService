@@ -161,6 +161,7 @@ namespace EasyService {
 		}
 
 		private void Button_Close_Click(object sender, RoutedEventArgs e) {
+			ScrollViewerForUserControl.ScrollToTop();
 			mainContentControl.Content = new Views.Welcome();
 			Button_Create.Visibility = Visibility.Visible;
 			Button_Close.Visibility = Visibility.Hidden;
