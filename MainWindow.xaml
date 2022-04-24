@@ -249,9 +249,9 @@
 					Margin="0,5,10,0"
 					BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
 					BorderThickness="0.5">
-					<Grid>
+					<Grid VerticalAlignment="Center">
 						<ScrollViewer x:Name="ScrollViewerForUserControl" VerticalScrollBarVisibility="Auto">
-							<UserControl x:Name="mainContentControl" />
+							<mah:TransitioningContentControl x:Name="mainContentControl" Transition="Up" />
 						</ScrollViewer>
 					</Grid>
 				</Border>

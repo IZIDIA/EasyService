@@ -9,9 +9,9 @@ using System.Windows.Controls;
 
 namespace EasyService {
 	public class MainWindowViewModel : INotifyPropertyChanged {
+		public readonly string addres = "http://laravelproject";
+		public readonly string cheker = "accdede43f326c52d88d62b98de5e940";
 		private string welcomeText;
-		private string welcomeIconType;
-		private string welcomeIconColor;
 		public string WelcomeText {
 			get { return welcomeText; }
 			set {
@@ -19,6 +19,7 @@ namespace EasyService {
 				OnPropertyChanged("WelcomeText");
 			}
 		}
+		private string welcomeIconType;
 		public string WelcomeIconType {
 			get { return welcomeIconType; }
 			set {
@@ -26,6 +27,7 @@ namespace EasyService {
 				OnPropertyChanged("WelcomeIconType");
 			}
 		}
+		private string welcomeIconColor;
 		public string WelcomeIconColor {
 			get { return welcomeIconColor; }
 			set {
@@ -33,6 +35,8 @@ namespace EasyService {
 				OnPropertyChanged("WelcomeIconColor");
 			}
 		}
+
+
 		public event PropertyChangedEventHandler PropertyChanged;
 		public void OnPropertyChanged([CallerMemberName] string prop = "") {
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
@@ -47,9 +51,5 @@ namespace EasyService {
 
 			return false;
 		}
-
-		private bool enableAnonym;
-
-		public bool EnableAnonym { get => enableAnonym; set => SetProperty(ref enableAnonym, value); }
 	}
 }

@@ -14,12 +14,18 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace EasyService.Views {
-	/// <summary>
-	/// Логика взаимодействия для RequestForm.xaml
-	/// </summary>
 	public partial class RequestForm : UserControl {
 		public RequestForm() {
 			InitializeComponent();
+		}
+		private void ImagePickButton_Click(object sender, RoutedEventArgs e) {
+			var dialog = new Microsoft.Win32.OpenFileDialog {
+				Filter = "Изображение(*.JPG;*.JPEG;*.PNG)|*.JPG;*.JPEG;*.PNG"
+			};
+			var result = dialog.ShowDialog();
+			if (result == true) {
+				ImageName.Text = dialog.SafeFileName;
+			}
 		}
 	}
 }

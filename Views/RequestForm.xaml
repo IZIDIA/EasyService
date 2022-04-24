@@ -56,7 +56,7 @@
 			Margin="0,5,0,5"
 			Orientation="Vertical">
 			<StackPanel Style="{StaticResource InputFieldStack}">
-				<mah:ToggleSwitch Content="Анонимная заявка" IsOn="{Binding EnableAnonym}" />
+				<mah:ToggleSwitch Content="Анонимная заявка" />
 			</StackPanel>
 			<DockPanel LastChildFill="False" Style="{StaticResource InputFieldDock}">
 				<StackPanel Width="220" DockPanel.Dock="Left">
@@ -307,6 +307,47 @@
 					FontSize="13"
 					ScrollViewer.VerticalScrollBarVisibility="Auto"
 					TextWrapping="Wrap" />
+			</StackPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel HorizontalAlignment="Center">
+					<StackPanel Orientation="Horizontal">
+						<Label Content="Фотография или скриншот проблемы (1) " Style="{StaticResource MainLabel}" />
+						<Label Content="(По желанию)" Style="{StaticResource TextMuted}" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,5,0,0"
+						HorizontalAlignment="Center"
+						Orientation="Horizontal">
+						<Button
+							x:Name="ImagePickButton"
+							Click="ImagePickButton_Click"
+							Content="Выберите файл" />
+						<TextBox
+							x:Name="ImageName"
+							Width="200"
+							Margin="5,0,0,0"
+							mah:TextBoxHelper.Watermark="Файл не выбран"
+							IsEnabled="False"
+							IsReadOnly="True" />
+					</StackPanel>
+					<Label Margin="0,5,0,0" HorizontalAlignment="Center">
+						<TextBlock
+							Width="300"
+							FontSize="12"
+							Text="Файл должен быть менее 10 МБ. Разрешенные типы файлов: jpg, jpeg, png"
+							TextAlignment="Center"
+							TextWrapping="Wrap" />
+					</Label>
+				</StackPanel>
+			</StackPanel>
+			<Separator Margin="0,10,0,15" />
+			<StackPanel Margin="0,0,0,30">
+				<Button
+					x:Name="SendRequestButton"
+					Margin="{StaticResource ControlMargin}"
+					Content="Отправить заявку"
+					FontSize="16"
+					Style="{DynamicResource MahApps.Styles.Button.Square.Accent}" />
 			</StackPanel>
 		</StackPanel>
 	</Grid>

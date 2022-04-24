@@ -26,9 +26,7 @@ using System.Diagnostics;
 
 namespace EasyService {
 	public partial class MainWindow : MetroWindow {
-		readonly string addres = "http://laravelproject";
 		readonly string mac = HelperMethods.GetBeautiMacAddress();
-		readonly string cheker = "accdede43f326c52d88d62b98de5e940";
 		public ObservableCollection<RequestInfo> Requests;
 		private ProgressDialogController controller;
 		private readonly MainWindowViewModel viewModel;
@@ -45,7 +43,6 @@ namespace EasyService {
 			hostName.Text = "Host: " + Dns.GetHostName();
 			await RefreshWelcomePageAndRequestsList();
 			mainContentControl.Content = new Views.Welcome();
-		//	await controller.CloseAsync();
 		}
 		public async Task RefreshWelcomePageAndRequestsList() {
 			Refresh_Button.IsEnabled = false;
@@ -54,8 +51,8 @@ namespace EasyService {
 			}
 			try {
 				var client = new HttpClient();
-				client.DefaultRequestHeaders.Add("Checker", cheker);
-				var responseBody = await client.GetStringAsync($"{addres}/api/v1/{mac}/requests");
+				client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
+				var responseBody = await client.GetStringAsync($"{viewModel.addres}/api/v1/{mac}/requests");
 				var requestsFromJson = JsonSerializer.Deserialize<List<RequestInfo>>(responseBody);
 				Requests = new ObservableCollection<RequestInfo>();
 				foreach (var item in requestsFromJson) {
@@ -113,6 +110,9 @@ namespace EasyService {
 					await controller.CloseAsync();
 				}
 				_ = await this.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
+				if (Requests != null) {
+					Requests.Clear();
+				}
 				ShowNetworkProblem();
 				launch = false;
 			}
@@ -121,8 +121,8 @@ namespace EasyService {
 		public async void GetWelcomeText() {
 			try {
 				var client = new HttpClient();
-				client.DefaultRequestHeaders.Add("Checker", cheker);
-				var responseBody = await client.GetStringAsync($"{addres}/api/v1/info");
+				client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
+				var responseBody = await client.GetStringAsync($"{viewModel.addres}/api/v1/info");
 				var requestsFromJson = JsonSerializer.Deserialize<Options>(responseBody);
 				viewModel.WelcomeText = requestsFromJson.WelcomeTextApp;
 				viewModel.WelcomeIconType = "CommentAlertOutline";
@@ -145,23 +145,23 @@ namespace EasyService {
 		}
 
 		private void Button_Phone_Click(object sender, RoutedEventArgs e) {
-			_ = Process.Start("explorer.exe", addres + "/contacts");
+			_ = Process.Start("explorer.exe", viewModel.addres + "/contacts");
 		}
 		private void Button_Doc_Click(object sender, RoutedEventArgs e) {
-			_ = Process.Start("explorer.exe", addres + "/docs");
+			_ = Process.Start("explorer.exe", viewModel.addres + "/docs");
 		}
 		private void Button_Web_Click(object sender, RoutedEventArgs e) {
-			_ = Process.Start("explorer.exe", addres);
+			_ = Process.Start("explorer.exe", viewModel.addres);
 		}
 
 		private void Button_Create_Click(object sender, RoutedEventArgs e) {
+			ScrollViewerForUserControl.ScrollToTop();
 			mainContentControl.Content = new Views.RequestForm();
 			Button_Create.Visibility = Visibility.Hidden;
 			Button_Close.Visibility = Visibility.Visible;
 		}
 
 		private void Button_Close_Click(object sender, RoutedEventArgs e) {
-			ScrollViewerForUserControl.ScrollToTop();
 			mainContentControl.Content = new Views.Welcome();
 			Button_Create.Visibility = Visibility.Visible;
 			Button_Close.Visibility = Visibility.Hidden;
