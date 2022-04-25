@@ -55,209 +55,240 @@
 			Width="480"
 			Margin="0,5,0,5"
 			Orientation="Vertical">
-			<StackPanel Style="{StaticResource InputFieldStack}">
-				<mah:ToggleSwitch Content="Анонимная заявка" />
+			<StackPanel Orientation="Horizontal" Style="{StaticResource InputFieldStack}">
+				<mah:ToggleSwitch
+					x:Name="AnonimInput"
+					Content="Анонимная заявка"
+					Toggled="AnonimInput_Toggled" />
 			</StackPanel>
-			<DockPanel LastChildFill="False" Style="{StaticResource InputFieldDock}">
+			<Separator Margin="0,0,0,10" />
+			<DockPanel
+				x:Name="NamePanel"
+				LastChildFill="False"
+				Style="{StaticResource InputFieldDock}">
 				<StackPanel Width="220" DockPanel.Dock="Left">
 					<StackPanel Orientation="Horizontal">
 						<Label Content="Имя" Style="{StaticResource MainLabel}" />
 						<Label Content="*" Style="{StaticResource RequiredField}" />
 					</StackPanel>
-					<TextBox />
+					<TextBox x:Name="FirstNameInput" MaxLength="40" />
 				</StackPanel>
 				<StackPanel Width="220" DockPanel.Dock="Right">
 					<StackPanel Orientation="Horizontal">
 						<Label Content="Фамилия" Style="{StaticResource MainLabel}" />
 						<Label Content="*" Style="{StaticResource RequiredField}" />
 					</StackPanel>
-					<TextBox />
+					<TextBox x:Name="LastNameInput" MaxLength="40" />
 				</StackPanel>
 			</DockPanel>
-			<StackPanel Style="{StaticResource InputFieldStack}">
+			<StackPanel x:Name="EmailPanel" Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
 					<Label Content="Email" Style="{StaticResource MainLabel}" />
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 				</StackPanel>
-				<TextBox />
+				<TextBox
+					x:Name="EmailInput"
+					MaxLength="64"
+					TextChanged="EmailInput_TextChanged" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
 					<Label Content="Местонахождение оборудования" Style="{StaticResource MainLabel}" />
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 				</StackPanel>
-				<TextBox mah:TextBoxHelper.Watermark="Здание, комната (кабинет)..." />
+				<TextBox
+					x:Name="LocationInput"
+					mah:TextBoxHelper.Watermark="Здание, комната (кабинет)..."
+					MaxLength="128" />
 			</StackPanel>
-			<StackPanel Style="{StaticResource InputFieldStack}">
+			<StackPanel x:Name="PhonePanel" Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
 					<Label Content="Контактный номер" Style="{StaticResource MainLabel}" />
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 					<Label Content="(Пример: 89991234455 или 79991234455)" Style="{StaticResource TextMuted}" />
 				</StackPanel>
-				<TextBox mah:TextBoxHelper.Watermark="Мобильный или рабочий..." />
+				<TextBox
+					x:Name="PhoneInput"
+					mah:TextBoxHelper.Watermark="Мобильный или рабочий..."
+					MaxLength="11"
+					PreviewTextInput="PhoneInput_PreviewTextInput" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
 					<Label Content="Инвентарный номер оборудования" Style="{StaticResource MainLabel}" />
 					<Label Content="(Если имеется)" Style="{StaticResource TextMuted}" />
 				</StackPanel>
-				<TextBox mah:TextBoxHelper.Watermark="Номер, для ведения учета..." />
+				<TextBox
+					x:Name="InventoryNumberInput"
+					mah:TextBoxHelper.Watermark="Номер, для ведения учета..."
+					MaxLength="64" />
 			</StackPanel>
-			<Separator Margin="0,10,0,15" />
-			<StackPanel Style="{StaticResource InputFieldStack}">
-				<StackPanel.Resources>
-					<Style BasedOn="{StaticResource MahApps.Styles.RadioButton}" TargetType="{x:Type RadioButton}">
-						<Setter Property="Margin" Value="{StaticResource ControlMargin}" />
-					</Style>
-				</StackPanel.Resources>
-				<Label Content="Решить проблему в вашем присутствии?" Style="{StaticResource MainLabel}" />
-				<RadioButton
-					Content="Неважно"
-					GroupName="G1"
-					IsChecked="True"
-					IsEnabled="True" />
-				<RadioButton
-					Content="Да, решить проблему в моём присутствии"
-					GroupName="G1"
-					IsChecked="False"
-					IsEnabled="True" />
-				<RadioButton
-					Content="Нет, решить проблему в моё отсутствие"
-					GroupName="G1"
-					IsChecked="False"
-					IsEnabled="True" />
-			</StackPanel>
-			<StackPanel x:Name="WorkTime" Style="{StaticResource InputFieldStack}">
-				<StackPanel>
-					<Label Padding="0" Content="График вашей работы:" />
-					<Label Padding="0,0,0,10" Style="{StaticResource TextMuted}">
-						<TextBlock Text="(Если график не получается задать по шаблону, сообщите о нём в тексте заявки)" TextWrapping="Wrap" />
-					</Label>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
+			<Separator x:Name="WorkTimeSeparator" Margin="0,10,0,15" />
+			<StackPanel x:Name="WorkTimePanel">
+				<StackPanel x:Name="WorkTimeQuestionPanel" Style="{StaticResource InputFieldStack}">
 					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						<Style BasedOn="{StaticResource MahApps.Styles.RadioButton}" TargetType="{x:Type RadioButton}">
+							<Setter Property="Margin" Value="{StaticResource ControlMargin}" />
+						</Style>
 					</StackPanel.Resources>
-					<CheckBox
-						x:Name="MondayCheck"
-						Content="Понедельник"
-						IsChecked="True" />
-					<StackPanel x:Name="MondayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="MondayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="MondayTo" Style="{StaticResource EveningTime}" />
+					<Label Content="Решить проблему в вашем присутствии?" Style="{StaticResource MainLabel}" />
+					<RadioButton
+						x:Name="RadioInputOne"
+						Click="RadioInput_Click"
+						Content="Неважно"
+						GroupName="G1"
+						IsChecked="True"
+						IsEnabled="True" />
+					<RadioButton
+						x:Name="RadioInputTwo"
+						Click="RadioInput_Click"
+						Content="Да, решить проблему в моём присутствии"
+						GroupName="G1"
+						IsChecked="False"
+						IsEnabled="True" />
+					<RadioButton
+						x:Name="RadioInputThree"
+						Click="RadioInput_Click"
+						Content="Нет, решить проблему в моё отсутствие"
+						GroupName="G1"
+						IsChecked="False"
+						IsEnabled="True" />
+				</StackPanel>
+				<StackPanel
+					x:Name="WorkTimeInputPanel"
+					Style="{StaticResource InputFieldStack}"
+					Visibility="Collapsed">
+					<StackPanel>
+						<Label Padding="0" Content="График вашей работы:" />
+						<Label Padding="0,0,0,10" Style="{StaticResource TextMuted}">
+							<TextBlock Text="(Если график не получается задать по шаблону, сообщите о нём в тексте заявки)" TextWrapping="Wrap" />
+						</Label>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox
+							x:Name="MondayCheck"
+							Content="Понедельник"
+							IsChecked="True" />
+						<StackPanel x:Name="MondayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="MondayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="MondayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox
-						x:Name="TuesdayCheck"
-						Content="Вторник"
-						IsChecked="True" />
-					<StackPanel x:Name="TuesdayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="TuesdayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="TuesdayTo" Style="{StaticResource EveningTime}" />
-						</StackPanel>
-					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox
-						x:Name="WednesdayCheck"
-						Content="Среда"
-						IsChecked="True" />
-					<StackPanel x:Name="WednesdayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="WednesdayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="WednesdayTo" Style="{StaticResource EveningTime}" />
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox
+							x:Name="TuesdayCheck"
+							Content="Вторник"
+							IsChecked="True" />
+						<StackPanel x:Name="TuesdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="TuesdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="TuesdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox
-						x:Name="ThursdayCheck"
-						Content="Четверг"
-						IsChecked="True" />
-					<StackPanel x:Name="ThursdayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="ThursdayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="ThursdayTo" Style="{StaticResource EveningTime}" />
-						</StackPanel>
-					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox
-						x:Name="FridayCheck"
-						Content="Пятница"
-						IsChecked="True" />
-					<StackPanel x:Name="FridayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="FridayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="FridayTo" Style="{StaticResource EveningTime}" />
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox
+							x:Name="WednesdayCheck"
+							Content="Среда"
+							IsChecked="True" />
+						<StackPanel x:Name="WednesdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="WednesdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="WednesdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox x:Name="SaturdayCheck" Content="Суббота" />
-					<StackPanel x:Name="SaturdayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="SaturdayFrom" Style="{StaticResource MorningTime}" />
-						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="SaturdayTo" Style="{StaticResource EveningTime}" />
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox
+							x:Name="ThursdayCheck"
+							Content="Четверг"
+							IsChecked="True" />
+						<StackPanel x:Name="ThursdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="ThursdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="ThursdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-				</StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<StackPanel.Resources>
-						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
-					</StackPanel.Resources>
-					<CheckBox x:Name="SundayCheck" Content="Воскресенье" />
-					<StackPanel x:Name="SundayPanel" Orientation="Horizontal">
-						<StackPanel Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="С:" />
-							<mah:TimePicker x:Name="SundayFrom" Style="{StaticResource MorningTime}" />
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox
+							x:Name="FridayCheck"
+							Content="Пятница"
+							IsChecked="True" />
+						<StackPanel x:Name="FridayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="FridayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="FridayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
-						<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
-							<Label VerticalAlignment="Center" Content="До:" />
-							<mah:TimePicker x:Name="SundayTo" Style="{StaticResource EveningTime}" />
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox x:Name="SaturdayCheck" Content="Суббота" />
+						<StackPanel x:Name="SaturdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="SaturdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="SaturdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<CheckBox x:Name="SundayCheck" Content="Воскресенье" />
+						<StackPanel x:Name="SundayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<mah:TimePicker x:Name="SundayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<mah:TimePicker x:Name="SundayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
 						</StackPanel>
 					</StackPanel>
 				</StackPanel>
@@ -269,22 +300,28 @@
 					<StackPanel.Resources>
 						<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 					</StackPanel.Resources>
-					<CheckBox x:Name="PasswordCheck" Content="Да, проблема с текущим компьютером" />
+					<CheckBox
+						x:Name="PasswordCheck"
+						Click="PasswordCheck_Click"
+						Content="Да, проблема с текущим компьютером" />
 				</StackPanel>
 			</StackPanel>
 			<DockPanel
 				x:Name="PasswordPanel"
 				LastChildFill="True"
-				Style="{StaticResource InputFieldDock}">
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
 				<StackPanel DockPanel.Dock="Left">
 					<StackPanel Orientation="Horizontal">
 						<Label Content="Пароль пользователя:" Style="{StaticResource MainLabel}" />
 						<Label Content="(Если имеется)" Style="{StaticResource TextMuted}" />
 					</StackPanel>
 					<TextBox
+						x:Name="PasswordInput"
 						Width="220"
 						HorizontalAlignment="Left"
-						mah:TextBoxHelper.Watermark="Для входа в систему..." />
+						mah:TextBoxHelper.Watermark="Для входа в систему..."
+						MaxLength="64" />
 				</StackPanel>
 			</DockPanel>
 			<Separator Margin="0,10,0,15" />
@@ -293,7 +330,10 @@
 					<Label Content="Тема" Style="{StaticResource MainLabel}" />
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 				</StackPanel>
-				<TextBox />
+				<TextBox
+					x:Name="TitleInput"
+					mah:TextBoxHelper.Watermark="Например: Мерцает монитор..."
+					MaxLength="64" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
@@ -301,10 +341,13 @@
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 				</StackPanel>
 				<TextBox
+					x:Name="MessageInput"
 					Height="200"
+					mah:TextBoxHelper.Watermark="Опишите вашу проблему..."
 					AcceptsReturn="True"
 					AcceptsTab="True"
 					FontSize="13"
+					MaxLength="4000"
 					ScrollViewer.VerticalScrollBarVisibility="Auto"
 					TextWrapping="Wrap" />
 			</StackPanel>
@@ -340,11 +383,22 @@
 					</Label>
 				</StackPanel>
 			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<mah:ToggleSwitch
+					x:Name="SavePersonDataInput"
+					Content="Сохранить персональные данные"
+					Toggled="SavePersonDataInput_Toggled" />
+				<Label
+					VerticalAlignment="Center"
+					Content="(Имя, почта, телефон)"
+					Style="{StaticResource TextMuted}" />
+			</StackPanel>
 			<Separator Margin="0,10,0,15" />
 			<StackPanel Margin="0,0,0,30">
 				<Button
 					x:Name="SendRequestButton"
 					Margin="{StaticResource ControlMargin}"
+					Click="SendRequestButton_Click"
 					Content="Отправить заявку"
 					FontSize="16"
 					Style="{DynamicResource MahApps.Styles.Button.Square.Accent}" />

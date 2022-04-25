@@ -9,6 +9,7 @@ using System.Windows.Controls;
 
 namespace EasyService {
 	public class MainWindowViewModel : INotifyPropertyChanged {
+		public MainWindow mainWindow;
 		public readonly string addres = "http://laravelproject";
 		public readonly string cheker = "accdede43f326c52d88d62b98de5e940";
 		private string welcomeText;

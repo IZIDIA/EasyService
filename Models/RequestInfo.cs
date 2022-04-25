@@ -1,74 +1,73 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace EasyService {
 	public class RequestInfo {
-		[JsonPropertyName("id")]
+		[JsonProperty("id")]
 		public int Id { get; set; }
 
-		[JsonPropertyName("admin")]
+		[JsonProperty("admin")]
 		public string Admin { get; set; }
 
-		[JsonPropertyName("from_pc")]
+		[JsonProperty("from_pc")]
 		public int FromPc { get; set; }
 
-		[JsonPropertyName("mac")]
+		[JsonProperty("mac")]
 		public string Mac { get; set; }
 
-		[JsonPropertyName("name")]
+		[JsonProperty("name")]
 		public string Name { get; set; }
 
-		[JsonPropertyName("email")]
+		[JsonProperty("email")]
 		public string Email { get; set; }
 
-		[JsonPropertyName("ip_address")]
+		[JsonProperty("ip_address")]
 		public string IpAddress { get; set; }
 
-		[JsonPropertyName("topic")]
+		[JsonProperty("topic")]
 		public string Topic { get; set; }
 
-		[JsonPropertyName("inventory_number")]
+		[JsonProperty("inventory_number")]
 		public string InventoryNumber { get; set; }
 
-		[JsonPropertyName("location")]
+		[JsonProperty("location")]
 		public string Location { get; set; }
 
-		[JsonPropertyName("phone_call_number")]
+		[JsonProperty("phone_call_number")]
 		public string PhoneCallNumber { get; set; }
 
-		[JsonPropertyName("solution_with_me")]
+		[JsonProperty("solution_with_me")]
 		public string SolutionWithMe { get; set; }
 
-		[JsonPropertyName("problem_with_my_pc")]
+		[JsonProperty("problem_with_my_pc")]
 		public int ProblemWithMyPc { get; set; }
 
-		[JsonPropertyName("work_time")]
+		[JsonProperty("work_time")]
 		public string WorkTime { get; set; }
 
-		[JsonPropertyName("user_password")]
+		[JsonProperty("user_password")]
 		public string UserPassword { get; set; }
 
-		[JsonPropertyName("text")]
+		[JsonProperty("text")]
 		public string Text { get; set; }
 
-		[JsonPropertyName("status")]
+		[JsonProperty("status")]
 		public string Status { get; set; }
 
-		[JsonPropertyName("photo")]
+		[JsonProperty("photo")]
 		public string Photo { get; set; }
 
-		[JsonPropertyName("comments")]
+		[JsonProperty("comments")]
 		public string Coments { get; set; }
 
-		[JsonPropertyName("beauty_closed_at")]
+		[JsonProperty("beauty_closed_at")]
 		public string ClosedAt { get; set; }
 
-		[JsonPropertyName("beauty_created_at")]
+		[JsonProperty("beauty_created_at")]
 		public string CreatedAt { get; set; }
 
 		public string Icon { get; set; }

@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-using System.Text.Json;
+using Newtonsoft.Json;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Collections.ObjectModel;
@@ -28,17 +28,19 @@ namespace EasyService {
 	public partial class MainWindow : MetroWindow {
 		readonly string mac = HelperMethods.GetBeautiMacAddress();
 		public ObservableCollection<RequestInfo> Requests;
-		private ProgressDialogController controller;
+		public ProgressDialogController controller;
 		private readonly MainWindowViewModel viewModel;
 		bool launch = false;
 
 		public MainWindow() {
 			InitializeComponent();
 			viewModel = (MainWindowViewModel)DataContext;
+			viewModel.mainWindow = this;
 			LaunchApp();
 		}
 		public async void LaunchApp() {
 			controller = await this.ShowProgressAsync("Загрузка приложения", "Пожалуйста подождите...");
+			controller.SetIndeterminate();
 			ipv4.Text = "IP: " + HelperMethods.GetIPv4();
 			hostName.Text = "Host: " + Dns.GetHostName();
 			await RefreshWelcomePageAndRequestsList();
@@ -53,7 +55,7 @@ namespace EasyService {
 				var client = new HttpClient();
 				client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
 				var responseBody = await client.GetStringAsync($"{viewModel.addres}/api/v1/{mac}/requests");
-				var requestsFromJson = JsonSerializer.Deserialize<List<RequestInfo>>(responseBody);
+				var requestsFromJson = JsonConvert.DeserializeObject<List<RequestInfo>>(responseBody);
 				Requests = new ObservableCollection<RequestInfo>();
 				foreach (var item in requestsFromJson) {
 					switch (item.Status) {
@@ -100,6 +102,9 @@ namespace EasyService {
 					}
 				}
 				RequestsList.ItemsSource = Requests;
+				if (RequestsList.Items.Count > 0) {
+					RequestsList.ScrollIntoView(RequestsList.Items[0]);
+				}
 				launch = true;
 				if (controller.IsOpen) {
 					await controller.CloseAsync();
@@ -123,7 +128,7 @@ namespace EasyService {
 				var client = new HttpClient();
 				client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
 				var responseBody = await client.GetStringAsync($"{viewModel.addres}/api/v1/info");
-				var requestsFromJson = JsonSerializer.Deserialize<Options>(responseBody);
+				var requestsFromJson = JsonConvert.DeserializeObject<Options>(responseBody);
 				viewModel.WelcomeText = requestsFromJson.WelcomeTextApp;
 				viewModel.WelcomeIconType = "CommentAlertOutline";
 				viewModel.WelcomeIconColor = "#ffffff";
@@ -156,15 +161,18 @@ namespace EasyService {
 
 		private void Button_Create_Click(object sender, RoutedEventArgs e) {
 			ScrollViewerForUserControl.ScrollToTop();
-			mainContentControl.Content = new Views.RequestForm();
+			mainContentControl.Content = new Views.RequestForm(viewModel);
 			Button_Create.Visibility = Visibility.Hidden;
 			Button_Close.Visibility = Visibility.Visible;
 		}
 
-		private void Button_Close_Click(object sender, RoutedEventArgs e) {
+		public void CloseAnyForm() {
 			mainContentControl.Content = new Views.Welcome();
 			Button_Create.Visibility = Visibility.Visible;
 			Button_Close.Visibility = Visibility.Hidden;
+		}
+		private void Button_Close_Click(object sender, RoutedEventArgs e) {
+			CloseAnyForm();
 		}
 	}
 }
