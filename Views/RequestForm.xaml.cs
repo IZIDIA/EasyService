@@ -18,6 +18,8 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using EasyService.PcInfo;
 
 namespace EasyService.Views {
 	public partial class RequestForm : UserControl {
@@ -94,7 +96,9 @@ namespace EasyService.Views {
 				}
 				viewModel.mainWindow.controller = await viewModel.mainWindow.ShowProgressAsync("Отправка заявки", "Пожалуйста подождите...");
 				viewModel.mainWindow.controller.SetIndeterminate();
+
 				PostRequestInfo(solution_with_me);
+
 			}
 			else {
 				_ = await viewModel.mainWindow.ShowMessageAsync("Предупреждение", "Заполните все обязательные поля");
@@ -117,6 +121,7 @@ namespace EasyService.Views {
 					multipartFormContent.Add(new StringContent(LocationInput.Text), "location");
 					multipartFormContent.Add(new StringContent(PhoneInput.Text), "phone_call_number");
 					multipartFormContent.Add(new StringContent(InventoryNumberInput.Text), "inventory_number");
+					multipartFormContent.Add(new StringContent((bool)PasswordCheck.IsChecked ? "on" : "off"), "problem_with_my_pc");
 					multipartFormContent.Add(new StringContent(PasswordInput.Text), "user_password");
 					multipartFormContent.Add(new StringContent(TitleInput.Text), "topic");
 					multipartFormContent.Add(new StringContent(MessageInput.Text), "text");
@@ -146,6 +151,20 @@ namespace EasyService.Views {
 						var fileContent = new ByteArrayContent(await fileStreamContent.ReadAsByteArrayAsync());
 						fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
 						multipartFormContent.Add(fileContent, "photo", System.IO.Path.GetFileName(image));
+					}
+					if ((bool)PasswordCheck.IsChecked) {
+						await Task.Run(() => {
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new OperatingSystemInfo())), "operating_system");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Specs())), "specs");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Temps())), "temps");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new ActiveProcesses())), "active_processes");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Network())), "network");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Peripherals())), "devices");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Disks())), "disks");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new InstalledPrograms())), "installed_programs");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new AutoloadPrograms())), "autoload_programs");
+							multipartFormContent.Add(new StringContent(JsonConvert.SerializeObject(new Performance())), "performance");
+						});
 					}
 					var result = await client.PostAsync("/api/v1/requests", multipartFormContent);
 					var resultContent = await result.Content.ReadAsStringAsync();

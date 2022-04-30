@@ -151,6 +151,9 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="OpenHardwareMonitorLib, Version=0.9.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\OpenHardwareMonitor.0.9.6\lib\net45\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -158,6 +161,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -203,6 +207,24 @@
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Models\Options.cs" />
     <Compile Include="Models\RequestInfo.cs" />
+    <Compile Include="PcInfo\ActiveProcesses.cs" />
+    <Compile Include="PcInfo\AutoloadPrograms.cs" />
+    <Compile Include="PcInfo\Devices\CPUObject.cs" />
+    <Compile Include="PcInfo\Devices\DiskObject.cs" />
+    <Compile Include="PcInfo\Devices\GPUObject.cs" />
+    <Compile Include="PcInfo\Devices\MotherboardObject.cs" />
+    <Compile Include="PcInfo\Devices\PrinterObject.cs" />
+    <Compile Include="PcInfo\Devices\RAMObject.cs" />
+    <Compile Include="PcInfo\Disks.cs" />
+    <Compile Include="PcInfo\InstalledPrograms.cs" />
+    <Compile Include="PcInfo\Network.cs" />
+    <Compile Include="PcInfo\Network\AdapterInfo.cs" />
+    <Compile Include="PcInfo\Network\AdapterObject.cs" />
+    <Compile Include="PcInfo\OperatingSystemInfo.cs" />
+    <Compile Include="PcInfo\Performance.cs" />
+    <Compile Include="PcInfo\Peripherals.cs" />
+    <Compile Include="PcInfo\Specs.cs" />
+    <Compile Include="PcInfo\Temps.cs" />
     <Compile Include="Views\RequestForm.xaml.cs">
       <DependentUpon>RequestForm.xaml</DependentUpon>
     </Compile>
