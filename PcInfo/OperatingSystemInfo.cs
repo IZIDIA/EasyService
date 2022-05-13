@@ -32,9 +32,9 @@ namespace EasyService.PcInfo {
 				VersionOc = string.Format("{0}", queryObj["Version"]);
 				SerialNumber = string.Format("{0}", queryObj["SerialNumber"]);
 				SystemName = string.Format("{0}", queryObj["CSName"]);
-				UserName = string.Format("{0}", queryObj["RegisteredUser"]);
 				Architecture = string.Format("{0}", queryObj["OSArchitecture"]);
 			}
+			UserName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 		}
 		[DllImport("kernel32.dll",
 		EntryPoint = "GetFirmwareEnvironmentVariableW",
