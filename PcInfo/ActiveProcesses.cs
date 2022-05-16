@@ -15,8 +15,11 @@ namespace EasyService.PcInfo {
 			ActiveProcessesList = new List<string>();
 			var processCollection = Process.GetProcesses();
 			foreach (Process p in processCollection) {
-				ActiveProcessesList.Add(p.ProcessName);
+				if (!ActiveProcessesList.Contains(p.ProcessName)) {
+					ActiveProcessesList.Add(p.ProcessName);
+				}
 			}
+			ActiveProcessesList.Sort();
 		}
 	}
 }
