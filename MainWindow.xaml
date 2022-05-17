@@ -111,24 +111,26 @@
 									<iconPacks:PackIconMaterial
 										Width="25"
 										Height="25"
-										Margin="10,0,0,0"
+										Margin="0,0,10,0"
 										HorizontalAlignment="Left"
 										VerticalAlignment="Center"
 										Foreground="{Binding Path=IconColor}"
 										Kind="{Binding Path=Icon}" />
 									<StackPanel
 										Width="120"
-										Height="35"
+										Height="40"
 										Margin="0,0,0,0"
 										VerticalAlignment="Center">
 										<TextBlock
-											HorizontalAlignment="Right"
+											HorizontalAlignment="Left"
 											FontSize="14"
-											Text="{Binding Path=IdName}" />
+											Text="{Binding Path=IdName}"
+											TextTrimming="CharacterEllipsis" />
 										<TextBlock
-											HorizontalAlignment="Right"
-											FontSize="14"
-											Text="{Binding Path=CreatedAt}" />
+											HorizontalAlignment="Left"
+											FontSize="12"
+											Text="{Binding Path=CreatedAt}"
+											TextTrimming="CharacterEllipsis" />
 									</StackPanel>
 								</StackPanel>
 							</DataTemplate>

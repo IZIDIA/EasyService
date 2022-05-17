@@ -3,12 +3,313 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:local="clr-namespace:EasyService.Views"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+	xmlns:local="clr-namespace:EasyService"
+	xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	d:DesignHeight="800"
-	d:DesignWidth="600"
+	MaxWidth="580"
+	d:DataContext="{d:DesignInstance local:MainWindowViewModel}"
+	d:DesignWidth="580"
+	FontSize="14"
 	mc:Ignorable="d">
+	<UserControl.Resources>
+		<Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+		<Style x:Key="MainLabel" TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+		<Style x:Key="TextMuted" TargetType="Label">
+			<Setter Property="Padding" Value="5,1,0,0" />
+			<Setter Property="FontSize" Value="12" />
+			<Setter Property="Foreground" Value="#6c757d" />
+		</Style>
+		<Style x:Key="InputFieldStack" TargetType="StackPanel">
+			<Setter Property="Margin" Value="0,0,0,0" />
+		</Style>
+		<Style x:Key="InputFieldDock" TargetType="DockPanel">
+			<Setter Property="Margin" Value="0,0,0,0" />
+		</Style>
+		<Style x:Key="MorningTime" TargetType="TextBox">
+			<Setter Property="Width" Value="50" />
+			<Setter Property="Height" Value="20" />
+			<Setter Property="IsReadOnly" Value="True" />
+		</Style>
+		<Style x:Key="EveningTime" TargetType="TextBox">
+			<Setter Property="Width" Value="50" />
+			<Setter Property="Height" Value="20" />
+			<Setter Property="IsReadOnly" Value="True" />
+		</Style>
+	</UserControl.Resources>
 	<Grid>
-		<TextBlock Text="Show" />
+		<StackPanel
+			Width="480"
+			Margin="0,5,0,5"
+			Orientation="Vertical">
+			<DockPanel x:Name="NamePanel" Style="{StaticResource InputFieldDock}">
+				<Label Content="Заявитель:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="NameInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel x:Name="EmailPanel" Style="{StaticResource InputFieldDock}">
+				<Label Content="Email:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="EmailInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Локация:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="LocationInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel x:Name="PhonePanel" Style="{StaticResource InputFieldDock}">
+				<Label Content="Телефон:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="PhoneInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Инвентарный номер:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="InventoryNumberInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<Separator x:Name="WorkTimeSeparator" />
+			<StackPanel x:Name="WorkTimePanel">
+				<StackPanel>
+					<Label Padding="0" Content="График работы:" />
+				</StackPanel>
+				<StackPanel
+					x:Name="WorkTimeInputPanel"
+					HorizontalAlignment="Center"
+					Style="{StaticResource InputFieldStack}">
+					<StackPanel Orientation="Horizontal">
+						<Label
+							x:Name="MondayCheck"
+							Width="110"
+							Content="Понедельник" />
+						<StackPanel x:Name="MondayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="MondayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="MondayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="TuesdayCheck"
+							Width="110"
+							Content="Вторник" />
+						<StackPanel x:Name="TuesdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="TuesdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="TuesdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="WednesdayCheck"
+							Width="110"
+							Content="Среда" />
+						<StackPanel x:Name="WednesdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="WednesdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="WednesdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="ThursdayCheck"
+							Width="110"
+							Content="Четверг" />
+						<StackPanel x:Name="ThursdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="ThursdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="ThursdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="FridayCheck"
+							Width="110"
+							Content="Пятница" />
+						<StackPanel x:Name="FridayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="FridayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="FridayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="SaturdayCheck"
+							Width="110"
+							Content="Суббота" />
+						<StackPanel x:Name="SaturdayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="SaturdayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="SaturdayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<StackPanel.Resources>
+							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
+						</StackPanel.Resources>
+						<Label
+							x:Name="SundayCheck"
+							Width="110"
+							Content="Воскресенье" />
+						<StackPanel x:Name="SundayPanel" Orientation="Horizontal">
+							<StackPanel Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="С:" />
+								<TextBox x:Name="SundayFrom" Style="{StaticResource MorningTime}" />
+							</StackPanel>
+							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+								<Label VerticalAlignment="Center" Content="До:" />
+								<TextBox x:Name="SundayTo" Style="{StaticResource EveningTime}" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+			<Separator />
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Проблема с ПК заявителя:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="PasswordCheck"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel
+				x:Name="PasswordPanel"
+				LastChildFill="True"
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
+				<StackPanel DockPanel.Dock="Left">
+					<StackPanel Orientation="Horizontal">
+						<Label Content="Пароль пользователя:" Style="{StaticResource MainLabel}" />
+						<Label Content="(Если имеется)" Style="{StaticResource TextMuted}" />
+					</StackPanel>
+					<TextBox
+						x:Name="PasswordInput"
+						Width="220"
+						HorizontalAlignment="Left"
+						mah:TextBoxHelper.Watermark="Для входа в систему..."
+						MaxLength="64" />
+				</StackPanel>
+			</DockPanel>
+			<Separator Margin="0,10,0,15" />
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Тема:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="TitleInput"
+						Text="Test Message"
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<StackPanel Orientation="Horizontal">
+					<Label Content="Сообщение:" Style="{StaticResource MainLabel}" />
+				</StackPanel>
+				<TextBox
+					x:Name="MessageInput"
+					Height="200"
+					AcceptsReturn="True"
+					AcceptsTab="True"
+					FontSize="13"
+					IsReadOnly="True"
+					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					TextWrapping="Wrap" />
+			</StackPanel>
+			<StackPanel x:Name="ImagePanel" Style="{StaticResource InputFieldStack}">
+				<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+					<Label Content="Фотография или скриншот проблемы:" Style="{StaticResource MainLabel}" />
+					<TextBlock HorizontalAlignment="Center">
+						<Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
+							Открыть в браузере
+						</Hyperlink>
+					</TextBlock>
+				</StackPanel>
+			</StackPanel>
+			<Separator Margin="0,10,0,15" />
+			<StackPanel Margin="0,0,0,30">
+				<Button
+					x:Name="DenyRequestButton"
+					Margin="{StaticResource ControlMargin}"
+					Click="DenyRequestButton_Click"
+					FontSize="15"
+					Style="{StaticResource MahApps.Styles.Button.Flat}">
+					<StackPanel Orientation="Horizontal">
+						<iconPacks:PackIconMaterial
+							Margin="0,0,10,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Kind="TrashCanOutline" />
+						<TextBlock VerticalAlignment="Center" Text="Отменить заявку" />
+					</StackPanel>
+				</Button>
+			</StackPanel>
+		</StackPanel>
 	</Grid>
 </UserControl>

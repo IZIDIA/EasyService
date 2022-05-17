@@ -14,12 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace EasyService.Views {
-	/// <summary>
-	/// Логика взаимодействия для RequestShow.xaml
-	/// </summary>
 	public partial class RequestShow : UserControl {
 		public RequestShow() {
 			InitializeComponent();
+		}
+
+		private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e) {
+
+		}
+
+		private void DenyRequestButton_Click(object sender, RoutedEventArgs e) {
+
 		}
 	}
 }

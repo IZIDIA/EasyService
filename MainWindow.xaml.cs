@@ -62,7 +62,7 @@ namespace EasyService {
 						case "В обработке":
 							Requests.Add(new RequestInfo {
 								IdName = "Заявка №" + item.Id,
-								CreatedAt = item.CreatedAt,
+								CreatedAt = item.Topic,
 								Icon = "ClipboardTextClockOutline",
 								IconColor = "#00cfcf"
 							});
@@ -70,7 +70,7 @@ namespace EasyService {
 						case "В работе":
 							Requests.Add(new RequestInfo {
 								IdName = "Заявка №" + item.Id,
-								CreatedAt = item.CreatedAt,
+								CreatedAt = item.Topic,
 								Icon = "ProgressWrench",
 								IconColor = "#e06900"
 							});
@@ -78,7 +78,7 @@ namespace EasyService {
 						case "Завершено":
 							Requests.Add(new RequestInfo {
 								IdName = "Заявка №" + item.Id,
-								CreatedAt = item.CreatedAt,
+								CreatedAt = item.Topic,
 								Icon = "CheckCircleOutline",
 								IconColor = "#85de00"
 							});
@@ -86,7 +86,7 @@ namespace EasyService {
 						case "Отменено":
 							Requests.Add(new RequestInfo {
 								IdName = "Заявка №" + item.Id,
-								CreatedAt = item.CreatedAt,
+								CreatedAt = item.Topic,
 								Icon = "CloseCircleOutline",
 								IconColor = "#b30000"
 							});
@@ -94,7 +94,7 @@ namespace EasyService {
 						default:
 							Requests.Add(new RequestInfo {
 								IdName = "Заявка №" + item.Id,
-								CreatedAt = item.CreatedAt,
+								CreatedAt = item.Topic,
 								Icon = "HelpCircleOutline",
 								IconColor = "#f5f5f5"
 							});
