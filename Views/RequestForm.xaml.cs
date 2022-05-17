@@ -20,14 +20,34 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using EasyService.PcInfo;
+using EasyService.HelperClasses;
 
 namespace EasyService.Views {
 	public partial class RequestForm : UserControl {
 		private readonly MainWindowViewModel viewModel;
 		private string image;
+		private PersonalData personalData;
 		public RequestForm(MainWindowViewModel viewModel) {
 			InitializeComponent();
 			this.viewModel = viewModel;
+			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json")) {
+				try {
+					personalData = JsonConvert.DeserializeObject<PersonalData>(
+						File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json")
+					);
+					FirstNameInput.Text = personalData.FirstName;
+					LastNameInput.Text = personalData.LastName;
+					EmailInput.Text = personalData.Email;
+					LocationInput.Text = personalData.Location;
+					PhoneInput.Text = personalData.Phone;
+					SavePersonDataInput.IsOn = true;
+				}
+				catch {
+					if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json")) {
+						File.Delete(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json");
+					}
+				}
+			}
 		}
 		private async void ImagePickButton_Click(object sender, RoutedEventArgs e) {
 			var dialog = new Microsoft.Win32.OpenFileDialog {
@@ -55,6 +75,7 @@ namespace EasyService.Views {
 					PhonePanel.Visibility = Visibility.Collapsed;
 					WorkTimePanel.Visibility = Visibility.Collapsed;
 					WorkTimeSeparator.Visibility = Visibility.Collapsed;
+					SavePersonalDataPanel.Visibility = Visibility.Collapsed;
 				}
 				else {
 					NamePanel.Visibility = Visibility.Visible;
@@ -62,6 +83,7 @@ namespace EasyService.Views {
 					PhonePanel.Visibility = Visibility.Visible;
 					WorkTimePanel.Visibility = Visibility.Visible;
 					WorkTimeSeparator.Visibility = Visibility.Visible;
+					SavePersonalDataPanel.Visibility = Visibility.Visible;
 				}
 			}
 		}
@@ -94,11 +116,19 @@ namespace EasyService.Views {
 				else if ((bool)RadioInputThree.IsChecked) {
 					solution_with_me = "3";
 				}
+				if (SavePersonDataInput.IsOn) {
+					var personalData = new PersonalData {
+						FirstName = FirstNameInput.Text,
+						LastName = LastNameInput.Text,
+						Email = EmailInput.Text,
+						Location = LocationInput.Text,
+						Phone = PhoneInput.Text
+					};
+					File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json", JsonConvert.SerializeObject(personalData));
+				}
 				viewModel.mainWindow.controller = await viewModel.mainWindow.ShowProgressAsync("Отправка заявки", "Пожалуйста подождите...");
 				viewModel.mainWindow.controller.SetIndeterminate();
-
 				PostRequestInfo(solution_with_me);
-
 			}
 			else {
 				_ = await viewModel.mainWindow.ShowMessageAsync("Предупреждение", "Заполните все обязательные поля");
@@ -207,7 +237,11 @@ namespace EasyService.Views {
 		}
 
 		private void SavePersonDataInput_Toggled(object sender, RoutedEventArgs e) {
-
+			if (!SavePersonDataInput.IsOn) {
+				if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json")) {
+					File.Delete(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json");
+				}
+			}
 		}
 		private void PhoneInput_PreviewTextInput(object sender, TextCompositionEventArgs e) {
 			var regex = new Regex("[^0-9]+");
@@ -216,9 +250,6 @@ namespace EasyService.Views {
 		private bool IsValidEmailAddress(string s) {
 			var regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
 			return regex.IsMatch(s);
-		}
-		private void EmailInput_TextChanged(object sender, TextChangedEventArgs e) {
-			var result = IsValidEmailAddress(EmailInput.Text);
 		}
 	}
 }

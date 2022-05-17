@@ -55,7 +55,10 @@
 			Width="480"
 			Margin="0,5,0,5"
 			Orientation="Vertical">
-			<StackPanel Orientation="Horizontal" Style="{StaticResource InputFieldStack}">
+			<StackPanel
+				HorizontalAlignment="Center"
+				Orientation="Horizontal"
+				Style="{StaticResource InputFieldStack}">
 				<mah:ToggleSwitch
 					x:Name="AnonimInput"
 					Content="Анонимная заявка"
@@ -86,10 +89,7 @@
 					<Label Content="Email" Style="{StaticResource MainLabel}" />
 					<Label Content="*" Style="{StaticResource RequiredField}" />
 				</StackPanel>
-				<TextBox
-					x:Name="EmailInput"
-					MaxLength="64"
-					TextChanged="EmailInput_TextChanged" />
+				<TextBox x:Name="EmailInput" MaxLength="64" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
@@ -383,7 +383,10 @@
 					</Label>
 				</StackPanel>
 			</StackPanel>
-			<StackPanel Orientation="Horizontal">
+			<StackPanel
+				x:Name="SavePersonalDataPanel"
+				HorizontalAlignment="Center"
+				Orientation="Horizontal">
 				<mah:ToggleSwitch
 					x:Name="SavePersonDataInput"
 					Content="Сохранить персональные данные"

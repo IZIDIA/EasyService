@@ -42,7 +42,7 @@ namespace EasyService {
 			controller = await this.ShowProgressAsync("Загрузка приложения", "Пожалуйста подождите...");
 			controller.SetIndeterminate();
 			ipv4.Text = "IP: " + HelperMethods.GetIPv4();
-			hostName.Text = "Host: " + Dns.GetHostName();
+			hostName.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 			await RefreshWelcomePageAndRequestsList();
 			mainContentControl.Content = new Views.Welcome();
 		}

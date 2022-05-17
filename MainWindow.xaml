@@ -47,7 +47,7 @@
 						HorizontalAlignment="Center"
 						VerticalAlignment="Center"
 						Kind="Account" />
-					<StackPanel>
+					<StackPanel Width="140">
 						<TextBlock
 							x:Name="ipv4"
 							FontSize="15"
@@ -98,9 +98,10 @@
 						x:Name="RequestsList"
 						Grid.Row="1"
 						Margin="5,5,5,0"
+						d:ItemsSource="{d:SampleData ItemCount=5}"
 						BorderBrush="Transparent"
 						BorderThickness="1"
-						SelectionChanged="RequestsListSelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}">
+						SelectionChanged="RequestsListSelectionChanged">
 						<ListBox.ItemTemplate>
 							<DataTemplate>
 								<StackPanel
@@ -188,7 +189,8 @@
 								Width="40"
 								Height="40"
 								Click="Button_Web_Click"
-								Style="{StaticResource AccentCircleButtonStyle}">
+								Style="{StaticResource AccentCircleButtonStyle}"
+								ToolTip="Веб-сайт сервиса">
 								<iconPacks:PackIconMaterial
 									Width="20"
 									Height="20"
@@ -198,7 +200,8 @@
 								Width="40"
 								Height="40"
 								Click="Button_Doc_Click"
-								Style="{StaticResource AccentCircleButtonStyle}">
+								Style="{StaticResource AccentCircleButtonStyle}"
+								ToolTip="Документы">
 								<iconPacks:PackIconMaterial
 									Width="20"
 									Height="20"
@@ -208,7 +211,8 @@
 								Width="40"
 								Height="40"
 								Click="Button_Phone_Click"
-								Style="{StaticResource AccentCircleButtonStyle}">
+								Style="{StaticResource AccentCircleButtonStyle}"
+								ToolTip="Контакты">
 								<iconPacks:PackIconMaterial
 									Width="20"
 									Height="20"
