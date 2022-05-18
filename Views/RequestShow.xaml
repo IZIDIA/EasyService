@@ -417,7 +417,7 @@
 						Width="384"
 						Height="216" />
 					<TextBlock HorizontalAlignment="Center">
-						<Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
+						<Hyperlink RequestNavigate="Hyperlink_RequestNavigate">
 							Открыть в браузере
 						</Hyperlink>
 					</TextBlock>

@@ -27,12 +27,12 @@ using EasyService.Views;
 
 namespace EasyService {
 	public partial class MainWindow : MetroWindow {
-		readonly string mac = HelperMethods.GetBeautiMacAddress();
+		public readonly string mac = HelperMethods.GetBeautiMacAddress();
 		public ObservableCollection<RequestInfo> Requests;
 		public ProgressDialogController controller;
 		private readonly MainWindowViewModel viewModel;
 		private bool allowSelection;
-		bool launch = false;
+		public bool launch = false;
 
 		public MainWindow() {
 			InitializeComponent();
