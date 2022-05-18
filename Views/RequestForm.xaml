@@ -74,14 +74,22 @@
 						<Label Content="Имя" Style="{StaticResource MainLabel}" />
 						<Label Content="*" Style="{StaticResource RequiredField}" />
 					</StackPanel>
-					<TextBox x:Name="FirstNameInput" MaxLength="40" />
+					<TextBox
+						x:Name="FirstNameInput"
+						Language="ru"
+						MaxLength="40"
+						SpellCheck.IsEnabled="True" />
 				</StackPanel>
 				<StackPanel Width="220" DockPanel.Dock="Right">
 					<StackPanel Orientation="Horizontal">
 						<Label Content="Фамилия" Style="{StaticResource MainLabel}" />
 						<Label Content="*" Style="{StaticResource RequiredField}" />
 					</StackPanel>
-					<TextBox x:Name="LastNameInput" MaxLength="40" />
+					<TextBox
+						x:Name="LastNameInput"
+						Language="ru"
+						MaxLength="40"
+						SpellCheck.IsEnabled="True" />
 				</StackPanel>
 			</DockPanel>
 			<StackPanel x:Name="EmailPanel" Style="{StaticResource InputFieldStack}">
@@ -99,7 +107,9 @@
 				<TextBox
 					x:Name="LocationInput"
 					mah:TextBoxHelper.Watermark="Здание, комната (кабинет)..."
-					MaxLength="128" />
+					Language="ru"
+					MaxLength="128"
+					SpellCheck.IsEnabled="True" />
 			</StackPanel>
 			<StackPanel x:Name="PhonePanel" Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
@@ -333,7 +343,9 @@
 				<TextBox
 					x:Name="TitleInput"
 					mah:TextBoxHelper.Watermark="Например: Мерцает монитор..."
-					MaxLength="64" />
+					Language="ru"
+					MaxLength="64"
+					SpellCheck.IsEnabled="True" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
@@ -347,8 +359,10 @@
 					AcceptsReturn="True"
 					AcceptsTab="True"
 					FontSize="13"
+					Language="ru"
 					MaxLength="4000"
 					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					SpellCheck.IsEnabled="True"
 					TextWrapping="Wrap" />
 			</StackPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">

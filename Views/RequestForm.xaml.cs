@@ -26,7 +26,7 @@ namespace EasyService.Views {
 	public partial class RequestForm : UserControl {
 		private readonly MainWindowViewModel viewModel;
 		private string image;
-		private PersonalData personalData;
+		private readonly PersonalData personalData;
 		public RequestForm(MainWindowViewModel viewModel) {
 			InitializeComponent();
 			this.viewModel = viewModel;

@@ -23,6 +23,7 @@ using System.Text.Unicode;
 using System.Collections.ObjectModel;
 using EasyService.Models;
 using System.Diagnostics;
+using EasyService.Views;
 
 namespace EasyService {
 	public partial class MainWindow : MetroWindow {
@@ -30,6 +31,7 @@ namespace EasyService {
 		public ObservableCollection<RequestInfo> Requests;
 		public ProgressDialogController controller;
 		private readonly MainWindowViewModel viewModel;
+		private bool allowSelection;
 		bool launch = false;
 
 		public MainWindow() {
@@ -45,8 +47,10 @@ namespace EasyService {
 			hostName.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 			await RefreshWelcomePageAndRequestsList();
 			mainContentControl.Content = new Views.Welcome();
+			allowSelection = true;
 		}
 		public async Task RefreshWelcomePageAndRequestsList() {
+			allowSelection = false;
 			Refresh_Button.IsEnabled = false;
 			if (!launch) {
 				GetWelcomeText();
@@ -122,6 +126,7 @@ namespace EasyService {
 				launch = false;
 			}
 			Refresh_Button.IsEnabled = true;
+			allowSelection = true;
 		}
 		public async void GetWelcomeText() {
 			try {
@@ -142,10 +147,18 @@ namespace EasyService {
 			viewModel.WelcomeIconColor = "#e8b600";
 		}
 		public void RequestsListSelectionChanged(object sender, SelectionChangedEventArgs e) {
-
+			if (allowSelection) {
+				ScrollViewerForUserControl.ScrollToTop();
+				mainContentControl.Content = new RequestShow(viewModel);
+				Button_Create.Visibility = Visibility.Hidden;
+				Button_Close.Visibility = Visibility.Visible;
+			}
 		}
 
 		private void Button_Refresh_Click(object sender, RoutedEventArgs e) {
+			if (mainContentControl.Content is RequestShow) {
+				CloseAnyForm();
+			}
 			_ = RefreshWelcomePageAndRequestsList();
 		}
 
@@ -161,13 +174,13 @@ namespace EasyService {
 
 		private void Button_Create_Click(object sender, RoutedEventArgs e) {
 			ScrollViewerForUserControl.ScrollToTop();
-			mainContentControl.Content = new Views.RequestForm(viewModel);
+			mainContentControl.Content = new RequestForm(viewModel);
 			Button_Create.Visibility = Visibility.Hidden;
 			Button_Close.Visibility = Visibility.Visible;
 		}
 
 		public void CloseAnyForm() {
-			mainContentControl.Content = new Views.Welcome();
+			mainContentControl.Content = new Welcome();
 			Button_Create.Visibility = Visibility.Visible;
 			Button_Close.Visibility = Visibility.Hidden;
 		}

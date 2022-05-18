@@ -17,6 +17,10 @@
 		<Style x:Key="MainLabel" TargetType="Label">
 			<Setter Property="FontWeight" Value="Bold" />
 		</Style>
+		<Style x:Key="HeaderLabel" TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="16" />
+		</Style>
 		<Style x:Key="TextMuted" TargetType="Label">
 			<Setter Property="Padding" Value="5,1,0,0" />
 			<Setter Property="FontSize" Value="12" />
@@ -44,12 +48,81 @@
 			Width="480"
 			Margin="0,5,0,5"
 			Orientation="Vertical">
+			<DockPanel HorizontalAlignment="Center">
+				<Label
+					VerticalAlignment="Center"
+					Content="Заявка №***"
+					FontSize="18"
+					FontWeight="Bold" />
+			</DockPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Статус:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="StatusInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Исполнитель:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="ExecutorInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<Separator Margin="0,5,0,10" />
+			<StackPanel Style="{StaticResource InputFieldStack}">
+				<TextBox
+					x:Name="CommentsInput"
+					Height="120"
+					AcceptsReturn="True"
+					AcceptsTab="True"
+					FontFamily="Consolas"
+					FontSize="12"
+					IsReadOnly="True"
+					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					TextWrapping="Wrap" />
+				<Grid Margin="0,5,0,5">
+					<TextBox
+						Width="360"
+						Height="70"
+						HorizontalAlignment="Left"
+						mah:TextBoxHelper.ClearTextButton="True"
+						mah:TextBoxHelper.Watermark="Коментарий к заявке"
+						AcceptsReturn="True"
+						AcceptsTab="True"
+						Language="ru"
+						ScrollViewer.VerticalScrollBarVisibility="Auto"
+						SpellCheck.IsEnabled="True" />
+					<Button
+						x:Name="SendCommentButton"
+						Width="100"
+						Margin="0,0,10,0"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Center"
+						Click="SendCommentButton_Click"
+						Content="Добавить"
+						FontSize="16"
+						Style="{DynamicResource MahApps.Styles.Button.Square.Accent}" />
+				</Grid>
+			</StackPanel>
+			<Separator Margin="0,5,0,5" />
+			<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+				<iconPacks:PackIconMaterial
+					VerticalAlignment="Center"
+					Foreground="#ffffff"
+					Kind="Account" />
+				<Label Content="Личные данные:" Style="{StaticResource HeaderLabel}" />
+			</StackPanel>
 			<DockPanel x:Name="NamePanel" Style="{StaticResource InputFieldDock}">
 				<Label Content="Заявитель:" Style="{StaticResource MainLabel}" />
 				<Label>
 					<TextBlock
 						x:Name="NameInput"
-						Text="Test Message"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
@@ -58,16 +131,7 @@
 				<Label>
 					<TextBlock
 						x:Name="EmailInput"
-						Text="Test Message"
-						TextTrimming="CharacterEllipsis" />
-				</Label>
-			</DockPanel>
-			<DockPanel Style="{StaticResource InputFieldDock}">
-				<Label Content="Локация:" Style="{StaticResource MainLabel}" />
-				<Label>
-					<TextBlock
-						x:Name="LocationInput"
-						Text="Test Message"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
@@ -76,7 +140,51 @@
 				<Label>
 					<TextBlock
 						x:Name="PhoneInput"
-						Text="Test Message"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel x:Name="CreatedAtPanel" Style="{StaticResource InputFieldDock}">
+				<Label Content="Дата создания:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="CreatedAtInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel x:Name="ClosedAtPanel" Style="{StaticResource InputFieldDock}">
+				<Label Content="Дата завершения:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="ClosedAtInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<Separator Margin="0,5,0,5" />
+			<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+				<iconPacks:PackIconMaterial
+					VerticalAlignment="Center"
+					Foreground="#ffffff"
+					Kind="MapMarker" />
+				<Label Content="Локация:" Style="{StaticResource HeaderLabel}" />
+			</StackPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Местонахождение:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="LocationInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="IP-адрес:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="IpInput"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
@@ -85,19 +193,45 @@
 				<Label>
 					<TextBlock
 						x:Name="InventoryNumberInput"
-						Text="Test Message"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<Separator x:Name="WorkTimeSeparator" />
+			<Separator Margin="0,5,0,5" />
+			<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+				<iconPacks:PackIconMaterial
+					VerticalAlignment="Center"
+					Foreground="#ffffff"
+					Kind="DotsHorizontalCircle" />
+				<Label Content="Опционально:" Style="{StaticResource HeaderLabel}" />
+			</StackPanel>
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Работа в присутствии заявителя:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
+						x:Name="WorkWithInput"
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
+			</DockPanel>
 			<StackPanel x:Name="WorkTimePanel">
 				<StackPanel>
-					<Label Padding="0" Content="График работы:" />
+					<Label Content="График работы:" Style="{StaticResource MainLabel}" />
 				</StackPanel>
 				<StackPanel
 					x:Name="WorkTimeInputPanel"
 					HorizontalAlignment="Center"
 					Style="{StaticResource InputFieldStack}">
+					<StackPanel.Resources>
+						<Style TargetType="Label">
+							<Setter Property="FontSize" Value="13" />
+							<Setter Property="FontFamily" Value="Consolas" />
+						</Style>
+						<Style TargetType="TextBox">
+							<Setter Property="FontSize" Value="13" />
+							<Setter Property="FontFamily" Value="Consolas" />
+						</Style>
+					</StackPanel.Resources>
 					<StackPanel Orientation="Horizontal">
 						<Label
 							x:Name="MondayCheck"
@@ -230,47 +364,37 @@
 					</StackPanel>
 				</StackPanel>
 			</StackPanel>
-			<Separator />
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Проблема с ПК заявителя:" Style="{StaticResource MainLabel}" />
 				<Label>
 					<TextBlock
-						x:Name="PasswordCheck"
-						Text="Test Message"
+						x:Name="ProblemWithPcinput"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<DockPanel
-				x:Name="PasswordPanel"
-				LastChildFill="True"
-				Style="{StaticResource InputFieldDock}"
-				Visibility="Collapsed">
-				<StackPanel DockPanel.Dock="Left">
-					<StackPanel Orientation="Horizontal">
-						<Label Content="Пароль пользователя:" Style="{StaticResource MainLabel}" />
-						<Label Content="(Если имеется)" Style="{StaticResource TextMuted}" />
-					</StackPanel>
-					<TextBox
+			<DockPanel Style="{StaticResource InputFieldDock}">
+				<Label Content="Пароль пользователя:" Style="{StaticResource MainLabel}" />
+				<Label>
+					<TextBlock
 						x:Name="PasswordInput"
-						Width="220"
-						HorizontalAlignment="Left"
-						mah:TextBoxHelper.Watermark="Для входа в систему..."
-						MaxLength="64" />
-				</StackPanel>
+						Text=""
+						TextTrimming="CharacterEllipsis" />
+				</Label>
 			</DockPanel>
-			<Separator Margin="0,10,0,15" />
+			<Separator Margin="0,5,0,5" />
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Тема:" Style="{StaticResource MainLabel}" />
 				<Label>
 					<TextBlock
 						x:Name="TitleInput"
-						Text="Test Message"
+						Text=""
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
 				<StackPanel Orientation="Horizontal">
-					<Label Content="Сообщение:" Style="{StaticResource MainLabel}" />
+					<Label Content="Текст заявки:" Style="{StaticResource MainLabel}" />
 				</StackPanel>
 				<TextBox
 					x:Name="MessageInput"
@@ -284,7 +408,14 @@
 			</StackPanel>
 			<StackPanel x:Name="ImagePanel" Style="{StaticResource InputFieldStack}">
 				<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-					<Label Content="Фотография или скриншот проблемы:" Style="{StaticResource MainLabel}" />
+					<Label
+						HorizontalAlignment="Center"
+						Content="Фотография или скриншот проблемы:"
+						Style="{StaticResource MainLabel}" />
+					<Image
+						x:Name="PhotoInput"
+						Width="384"
+						Height="216" />
 					<TextBlock HorizontalAlignment="Center">
 						<Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
 							Открыть в браузере
