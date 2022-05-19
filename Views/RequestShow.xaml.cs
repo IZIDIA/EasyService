@@ -20,36 +20,23 @@ using System.Windows.Shapes;
 namespace EasyService.Views {
 	public partial class RequestShow : UserControl {
 		private readonly MainWindowViewModel viewModel;
-		private readonly RequestInfo requestInfo;
-		public RequestShow(MainWindowViewModel viewModel) {
+		private RequestInfo requestInfo;
+		public RequestShow(MainWindowViewModel viewModel, int id) {
 			InitializeComponent();
+			MainGrid.Visibility = Visibility.Collapsed;
 			this.viewModel = viewModel;
-			
+			LaunchApp(id);
 		}
-		public async void LaunchApp() {
-
-
-
-
-			//Вытаскивать ID
-
-
-			await RefreshRequestInfo(1);
-
-			//var image = new Image();
-			//var fullFilePath = @"http://www.americanlayout.com/wp/wp-content/uploads/2012/08/C-To-Go-300x300.png";
-
-			//BitmapImage bitmap = new BitmapImage();
-			//bitmap.BeginInit();
-			//bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);
-			//bitmap.EndInit();
-
-			//image.Source = bitmap;
-			//wrapPanel1.Children.Add(image);
+		public async void LaunchApp(int id) {
+			await RefreshRequestInfo(id);
+			MainGrid.Visibility = Visibility.Visible;
+			if (viewModel.mainWindow.controller.IsOpen) {
+				await viewModel.mainWindow.controller.CloseAsync();
+			}
 		}
-		private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e) {
+		private void ImageHyperlink_Click(object sender, RoutedEventArgs e) {
 			if (requestInfo != null && requestInfo.Photo != null) {
-				_ = Process.Start("explorer.exe", viewModel.addres + "/" + requestInfo.Photo);
+				_ = Process.Start("explorer.exe", viewModel.addres + "/storage/" + requestInfo.Photo);
 			}
 		}
 
@@ -61,31 +48,37 @@ namespace EasyService.Views {
 
 		}
 
-		public async Task RefreshRequestInfo(string id) {
+		public async Task RefreshRequestInfo(int id) {
 			try {
 				var client = new HttpClient();
 				client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
 				var responseBody = await client.GetStringAsync($"{viewModel.addres}/api/v1/{viewModel.mainWindow.mac}/" + id);
-				var requestsFromJson = JsonConvert.DeserializeObject<RequestInfo>(responseBody);
-				if (requestsFromJson != null) {
-					StatusInput.Text = requestsFromJson.Status;
-					NameInput.Text = requestsFromJson.Name;
-					ExecutorInput.Text = requestsFromJson.Admin;
-					EmailInput.Text = requestsFromJson.Email;
-					PhoneInput.Text = requestsFromJson.PhoneCallNumber;
-					CreatedAtInput.Text = requestsFromJson.CreatedAt;
-					ClosedAtInput.Text = requestsFromJson.ClosedAt;
-					LocationInput.Text = requestsFromJson.Location;
-					IpInput.Text = requestsFromJson.IpAddress;
-					InventoryNumberInput.Text = requestsFromJson.InventoryNumber;
-					WorkWithInput.Text = requestsFromJson.SolutionWithMe;
+				requestInfo = JsonConvert.DeserializeObject<RequestInfo>(responseBody);
+				if (requestInfo != null) {
+					IdInput.Content = "Заявка №" + id;
+					StatusInput.Text = requestInfo.Status;
+					NameInput.Text = requestInfo.Name;
+					ExecutorInput.Text = requestInfo.Admin;
+					EmailInput.Text = requestInfo.Email;
+					PhoneInput.Text = requestInfo.PhoneCallNumber;
+					CreatedAtInput.Text = requestInfo.CreatedAt;
+					ClosedAtInput.Text = requestInfo.ClosedAt;
+					LocationInput.Text = requestInfo.Location;
+					IpInput.Text = requestInfo.IpAddress;
+					InventoryNumberInput.Text = requestInfo.InventoryNumber;
+					WorkWithInput.Text = requestInfo.SolutionWithMe;
 					//Сделать время в json формате
-					ProblemWithPcinput.Text = requestsFromJson.ProblemWithMyPc.ToString();
-					PasswordInput.Text = requestsFromJson.UserPassword;
-					TitleInput.Text = requestsFromJson.Topic;
-					MessageInput.Text = requestsFromJson.Text;
-
-
+					ProblemWithPcinput.Text = requestInfo.ProblemWithMyPc.ToString();
+					PasswordInput.Text = requestInfo.UserPassword;
+					TitleInput.Text = requestInfo.Topic;
+					MessageInput.Text = requestInfo.Text;
+					if (requestInfo.Photo != null) {
+						var bitmap = new BitmapImage();
+						bitmap.BeginInit();
+						bitmap.UriSource = new Uri(viewModel.addres + "/storage/" + requestInfo.Photo, UriKind.Absolute);
+						bitmap.EndInit();
+						PhotoInput.Source = bitmap;
+					}
 				}
 			}
 			catch {
@@ -93,11 +86,9 @@ namespace EasyService.Views {
 					await viewModel.mainWindow.controller.CloseAsync();
 				}
 				_ = await viewModel.mainWindow.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
-				if (viewModel.mainWindow.Requests != null) {
-					viewModel.mainWindow.Requests.Clear();
-				}
 				viewModel.mainWindow.ShowNetworkProblem();
 				viewModel.mainWindow.launch = false;
+				viewModel.mainWindow.CloseAnyForm();
 			}
 		}
 	}

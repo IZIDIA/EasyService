@@ -65,6 +65,7 @@ namespace EasyService {
 					switch (item.Status) {
 						case "В обработке":
 							Requests.Add(new RequestInfo {
+								Id = item.Id,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "ClipboardTextClockOutline",
@@ -73,6 +74,7 @@ namespace EasyService {
 							break;
 						case "В работе":
 							Requests.Add(new RequestInfo {
+								Id = item.Id,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "ProgressWrench",
@@ -81,6 +83,7 @@ namespace EasyService {
 							break;
 						case "Завершено":
 							Requests.Add(new RequestInfo {
+								Id = item.Id,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "CheckCircleOutline",
@@ -89,6 +92,7 @@ namespace EasyService {
 							break;
 						case "Отменено":
 							Requests.Add(new RequestInfo {
+								Id = item.Id,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "CloseCircleOutline",
@@ -97,6 +101,7 @@ namespace EasyService {
 							break;
 						default:
 							Requests.Add(new RequestInfo {
+								Id = item.Id,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "HelpCircleOutline",
@@ -147,19 +152,31 @@ namespace EasyService {
 			viewModel.WelcomeIconColor = "#e8b600";
 		}
 		public void RequestsListSelectionChanged(object sender, SelectionChangedEventArgs e) {
+			LoadRequestPage();
+		}
+		public async void LoadRequestPage() {
 			if (allowSelection) {
 				ScrollViewerForUserControl.ScrollToTop();
-				mainContentControl.Content = new RequestShow(viewModel);
+				var requestInfo = (RequestInfo)RequestsList.SelectedItem;
+				controller = await this.ShowProgressAsync("Загрузка заявки", "Пожалуйста подождите...");
+				controller.SetIndeterminate();
+				mainContentControl.Content = new RequestShow(viewModel, requestInfo.Id);
 				Button_Create.Visibility = Visibility.Hidden;
 				Button_Close.Visibility = Visibility.Visible;
 			}
 		}
 
-		private void Button_Refresh_Click(object sender, RoutedEventArgs e) {
-			if (mainContentControl.Content is RequestShow) {
-				CloseAnyForm();
+		private async void Button_Refresh_Click(object sender, RoutedEventArgs e) {
+			var selectedItemIndex = RequestsList.SelectedIndex;
+			if (mainContentControl.Content is RequestShow && RequestsList.SelectedItem != null) {
+				LoadRequestPage();
 			}
-			_ = RefreshWelcomePageAndRequestsList();
+			await RefreshWelcomePageAndRequestsList();
+			if (selectedItemIndex != -1) {
+				allowSelection = false;
+				RequestsList.SelectedItem = RequestsList.Items[selectedItemIndex];
+				allowSelection = true;
+			}
 		}
 
 		private void Button_Phone_Click(object sender, RoutedEventArgs e) {
@@ -180,6 +197,9 @@ namespace EasyService {
 		}
 
 		public void CloseAnyForm() {
+			allowSelection = false;
+			RequestsList.SelectedItem = null;
+			allowSelection = true;
 			mainContentControl.Content = new Welcome();
 			Button_Create.Visibility = Visibility.Visible;
 			Button_Close.Visibility = Visibility.Hidden;

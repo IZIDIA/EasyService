@@ -204,7 +204,7 @@ namespace EasyService.Views {
 						}
 						_ = await viewModel.mainWindow.ShowMessageAsync("Отлично", "Заявка успешно создана");
 						viewModel.mainWindow.CloseAnyForm();
-						_ = viewModel.mainWindow.RefreshWelcomePageAndRequestsList();
+						await viewModel.mainWindow.RefreshWelcomePageAndRequestsList();
 					}
 					else {
 						if (viewModel.mainWindow.controller.IsOpen) {
