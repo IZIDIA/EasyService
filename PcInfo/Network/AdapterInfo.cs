@@ -36,7 +36,7 @@ namespace NetInfo {
 				var ipProp = adapter.GetIPProperties();
 				foreach (UnicastIPAddressInformation ip in ipProp.UnicastAddresses) {
 					if ((adapter.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 || adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet) &&
-							ip.Address.AddressFamily == AddressFamily.InterNetwork) //
+							ip.Address.AddressFamily == AddressFamily.InterNetwork)
 					{
 						IPInterfaceProperties adapterProp = adapter.GetIPProperties();
 						IPv4InterfaceProperties adapterPropV4 = adapterProp.GetIPv4Properties();
@@ -58,9 +58,6 @@ namespace NetInfo {
 							Description = adapter.Description,
 							NetworkInterfaceType = adapter.NetworkInterfaceType.ToString(),
 							PhysicalAddress = adapter.GetPhysicalAddress().ToString(),
-							//	IsReceiveOnly = adapter.IsReceiveOnly,
-							//SupportMulticast = adapter.SupportsMulticast,
-							//	IsOperationalStatusUp = adapter.OperationalStatus == OperationalStatus.Up,
 							Speed = adapter.Speed,
 							IpAddress = ip.Address.ToString(),
 							SubnetMask = ip.IPv4Mask.ToString(),
@@ -68,16 +65,9 @@ namespace NetInfo {
 							DnsSuffix = adapterProp.DnsSuffix,
 							IsDnsEnabled = adapterProp.IsDnsEnabled,
 							IsDynamicDnsEnabled = adapterProp.IsDynamicDnsEnabled,
-							//Index = adapterPropV4.Index,
-							//Mtu = adapterPropV4.Mtu,
-							//IsAutomaticPrivateAddressingActive = adapterPropV4.IsAutomaticPrivateAddressingActive,
-							//IsAutomaticPrivateAddressingEnabled = adapterPropV4.IsAutomaticPrivateAddressingEnabled,
-							//IsForwardingEnabled = adapterPropV4.IsForwardingEnabled,
-							//UsesWins = adapterPropV4.UsesWins,
 							IsDHCPEnabled = adapterPropV4.IsDhcpEnabled,
 							DHCPServer = dhcpList,
 							DNSServer = dnsList,
-							//Internet = adapter.GetIPv4Statistics().BytesReceived > 0 && adapter.GetIPv4Statistics().BytesSent > 0
 						});
 					}
 				}

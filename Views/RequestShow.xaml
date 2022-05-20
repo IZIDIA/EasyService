@@ -14,6 +14,9 @@
 	mc:Ignorable="d">
 	<UserControl.Resources>
 		<Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+		<Style x:Key="HiddenPanel" TargetType="StackPanel">
+			<Setter Property="Visibility" Value="Collapsed" />
+		</Style>
 		<Style x:Key="MainLabel" TargetType="Label">
 			<Setter Property="FontWeight" Value="Bold" />
 		</Style>
@@ -35,11 +38,19 @@
 		<Style x:Key="MorningTime" TargetType="TextBox">
 			<Setter Property="Width" Value="50" />
 			<Setter Property="Height" Value="20" />
+			<Setter Property="FontFamily" Value="Consolas" />
+			<Setter Property="FontSize" Value="13" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+			<Setter Property="TextAlignment" Value="Center" />
 			<Setter Property="IsReadOnly" Value="True" />
 		</Style>
 		<Style x:Key="EveningTime" TargetType="TextBox">
 			<Setter Property="Width" Value="50" />
 			<Setter Property="Height" Value="20" />
+			<Setter Property="FontFamily" Value="Consolas" />
+			<Setter Property="FontSize" Value="13" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+			<Setter Property="TextAlignment" Value="Center" />
 			<Setter Property="IsReadOnly" Value="True" />
 		</Style>
 	</UserControl.Resources>
@@ -59,10 +70,7 @@
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Статус:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="StatusInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="StatusInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<DockPanel Style="{StaticResource InputFieldDock}">
@@ -70,7 +78,7 @@
 				<Label>
 					<TextBlock
 						x:Name="ExecutorInput"
-						Text=""
+						Foreground="#96FBFE"
 						TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
@@ -95,7 +103,7 @@
 						mah:TextBoxHelper.Watermark="Коментарий к заявке"
 						AcceptsReturn="True"
 						AcceptsTab="True"
-						Language="ru"
+						Language="ru-RU"
 						ScrollViewer.VerticalScrollBarVisibility="Auto"
 						SpellCheck.IsEnabled="True" />
 					<Button
@@ -121,46 +129,40 @@
 			<DockPanel x:Name="NamePanel" Style="{StaticResource InputFieldDock}">
 				<Label Content="Заявитель:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="NameInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="NameInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<DockPanel x:Name="EmailPanel" Style="{StaticResource InputFieldDock}">
+			<DockPanel
+				x:Name="EmailPanel"
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
 				<Label Content="Email:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="EmailInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="EmailInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<DockPanel x:Name="PhonePanel" Style="{StaticResource InputFieldDock}">
+			<DockPanel
+				x:Name="PhonePanel"
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
 				<Label Content="Телефон:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="PhoneInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="PhoneInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<DockPanel x:Name="CreatedAtPanel" Style="{StaticResource InputFieldDock}">
 				<Label Content="Дата создания:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="CreatedAtInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="CreatedAtInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<DockPanel x:Name="ClosedAtPanel" Style="{StaticResource InputFieldDock}">
+			<DockPanel
+				x:Name="ClosedAtPanel"
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
 				<Label Content="Дата завершения:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="ClosedAtInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="ClosedAtInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<Separator Margin="0,5,0,5" />
@@ -174,28 +176,19 @@
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Местонахождение:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="LocationInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="LocationInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="IP-адрес:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="IpInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="IpInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Инвентарный номер:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="InventoryNumberInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="InventoryNumberInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<Separator Margin="0,5,0,5" />
@@ -209,13 +202,10 @@
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Работа в присутствии заявителя:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="WorkWithInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="WorkWithInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<StackPanel x:Name="WorkTimePanel">
+			<StackPanel x:Name="WorkTimePanel" Style="{StaticResource HiddenPanel}">
 				<StackPanel>
 					<Label Content="График работы:" Style="{StaticResource MainLabel}" />
 				</StackPanel>
@@ -233,15 +223,21 @@
 							<Setter Property="FontFamily" Value="Consolas" />
 						</Style>
 					</StackPanel.Resources>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="MondayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<Label
 							x:Name="MondayCheck"
 							Width="110"
 							Content="Понедельник" />
-						<StackPanel x:Name="MondayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
-								<TextBox x:Name="MondayFrom" Style="{StaticResource MorningTime}" />
+								<TextBox
+									x:Name="MondayFrom"
+									Style="{StaticResource MorningTime}"
+									Text="09:00" />
 							</StackPanel>
 							<StackPanel Margin="5,0,0,0" Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="До:" />
@@ -249,7 +245,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="TuesdayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -257,7 +256,7 @@
 							x:Name="TuesdayCheck"
 							Width="110"
 							Content="Вторник" />
-						<StackPanel x:Name="TuesdayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="TuesdayFrom" Style="{StaticResource MorningTime}" />
@@ -268,7 +267,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="WednesdayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -276,7 +278,7 @@
 							x:Name="WednesdayCheck"
 							Width="110"
 							Content="Среда" />
-						<StackPanel x:Name="WednesdayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="WednesdayFrom" Style="{StaticResource MorningTime}" />
@@ -287,7 +289,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="ThursdayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -295,7 +300,7 @@
 							x:Name="ThursdayCheck"
 							Width="110"
 							Content="Четверг" />
-						<StackPanel x:Name="ThursdayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="ThursdayFrom" Style="{StaticResource MorningTime}" />
@@ -306,7 +311,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="FridayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -314,7 +322,7 @@
 							x:Name="FridayCheck"
 							Width="110"
 							Content="Пятница" />
-						<StackPanel x:Name="FridayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="FridayFrom" Style="{StaticResource MorningTime}" />
@@ -325,7 +333,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="SaturdayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -333,7 +344,7 @@
 							x:Name="SaturdayCheck"
 							Width="110"
 							Content="Суббота" />
-						<StackPanel x:Name="SaturdayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="SaturdayFrom" Style="{StaticResource MorningTime}" />
@@ -344,7 +355,10 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal">
+					<StackPanel
+						x:Name="SundayPanel"
+						Orientation="Horizontal"
+						Style="{StaticResource HiddenPanel}">
 						<StackPanel.Resources>
 							<Style BasedOn="{StaticResource MahApps.Styles.CheckBox.Win10}" TargetType="{x:Type CheckBox}" />
 						</StackPanel.Resources>
@@ -352,7 +366,7 @@
 							x:Name="SundayCheck"
 							Width="110"
 							Content="Воскресенье" />
-						<StackPanel x:Name="SundayPanel" Orientation="Horizontal">
+						<StackPanel Orientation="Horizontal">
 							<StackPanel Orientation="Horizontal">
 								<Label VerticalAlignment="Center" Content="С:" />
 								<TextBox x:Name="SundayFrom" Style="{StaticResource MorningTime}" />
@@ -365,32 +379,26 @@
 					</StackPanel>
 				</StackPanel>
 			</StackPanel>
-			<DockPanel Style="{StaticResource InputFieldDock}">
+			<DockPanel x:Name="ProblemWithPcPanel" Style="{StaticResource InputFieldDock}">
 				<Label Content="Проблема с ПК заявителя:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="ProblemWithPcinput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="ProblemWithPcInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
-			<DockPanel Style="{StaticResource InputFieldDock}">
+			<DockPanel
+				x:Name="PasswordPanel"
+				Style="{StaticResource InputFieldDock}"
+				Visibility="Collapsed">
 				<Label Content="Пароль пользователя:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="PasswordInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="PasswordInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<Separator Margin="0,5,0,5" />
 			<DockPanel Style="{StaticResource InputFieldDock}">
 				<Label Content="Тема:" Style="{StaticResource MainLabel}" />
 				<Label>
-					<TextBlock
-						x:Name="TitleInput"
-						Text=""
-						TextTrimming="CharacterEllipsis" />
+					<TextBlock x:Name="TitleInput" TextTrimming="CharacterEllipsis" />
 				</Label>
 			</DockPanel>
 			<StackPanel Style="{StaticResource InputFieldStack}">
@@ -407,7 +415,10 @@
 					ScrollViewer.VerticalScrollBarVisibility="Auto"
 					TextWrapping="Wrap" />
 			</StackPanel>
-			<StackPanel x:Name="ImagePanel" Style="{StaticResource InputFieldStack}">
+			<StackPanel
+				x:Name="ImagePanel"
+				Style="{StaticResource InputFieldStack}"
+				Visibility="Collapsed">
 				<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
 					<Label
 						HorizontalAlignment="Center"

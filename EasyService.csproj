@@ -204,7 +204,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HelperClasses\Comments.cs" />
     <Compile Include="HelperClasses\PersonalData.cs" />
+    <Compile Include="HelperClasses\WorkTime.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Models\Options.cs" />
     <Compile Include="Models\RequestInfo.cs" />
