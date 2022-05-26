@@ -33,7 +33,6 @@ namespace EasyService {
 		private readonly MainWindowViewModel viewModel;
 		private bool allowSelection;
 		public bool launch = false;
-
 		public MainWindow() {
 			InitializeComponent();
 			viewModel = (MainWindowViewModel)DataContext;
@@ -165,8 +164,10 @@ namespace EasyService {
 				Button_Close.Visibility = Visibility.Visible;
 			}
 		}
-
-		private async void Button_Refresh_Click(object sender, RoutedEventArgs e) {
+		private void Button_Refresh_Click(object sender, RoutedEventArgs e) {
+			Refresh();
+		}
+		public async void Refresh() {
 			var selectedItemIndex = RequestsList.SelectedIndex;
 			if (mainContentControl.Content is RequestShow && RequestsList.SelectedItem != null) {
 				LoadRequestPage();
@@ -178,7 +179,6 @@ namespace EasyService {
 				allowSelection = true;
 			}
 		}
-
 		private void Button_Phone_Click(object sender, RoutedEventArgs e) {
 			_ = Process.Start("explorer.exe", viewModel.addres + "/contacts");
 		}
@@ -188,14 +188,12 @@ namespace EasyService {
 		private void Button_Web_Click(object sender, RoutedEventArgs e) {
 			_ = Process.Start("explorer.exe", viewModel.addres);
 		}
-
 		private void Button_Create_Click(object sender, RoutedEventArgs e) {
 			ScrollViewerForUserControl.ScrollToTop();
 			mainContentControl.Content = new RequestForm(viewModel);
 			Button_Create.Visibility = Visibility.Hidden;
 			Button_Close.Visibility = Visibility.Visible;
 		}
-
 		public void CloseAnyForm() {
 			allowSelection = false;
 			RequestsList.SelectedItem = null;

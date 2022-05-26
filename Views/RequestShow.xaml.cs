@@ -22,15 +22,20 @@ namespace EasyService.Views {
 	public partial class RequestShow : UserControl {
 		private readonly MainWindowViewModel viewModel;
 		private RequestInfo requestInfo;
-		public RequestShow(MainWindowViewModel viewModel, int id) {
+		private readonly int id;
+		public RequestShow(MainWindowViewModel viewModel, int _id) {
 			InitializeComponent();
 			MainGrid.Visibility = Visibility.Collapsed;
 			this.viewModel = viewModel;
+			id = _id;
 			LaunchApp(id);
 		}
 		public async void LaunchApp(int id) {
 			await RefreshRequestInfo(id);
 			MainGrid.Visibility = Visibility.Visible;
+			if (requestInfo.Status != "Отменено") {
+				CancelPanel.Visibility = Visibility.Visible;
+			}
 			if (viewModel.mainWindow.controller.IsOpen) {
 				await viewModel.mainWindow.controller.CloseAsync();
 			}
@@ -41,15 +46,78 @@ namespace EasyService.Views {
 				_ = Process.Start("explorer.exe", viewModel.addres + "/storage/" + requestInfo.Photo);
 			}
 		}
-
-		private void DenyRequestButton_Click(object sender, RoutedEventArgs e) {
-
+		private async void DenyRequestButton_Click(object sender, RoutedEventArgs e) {
+			if (requestInfo.Status != "Отменено") {
+				var mySettings = new MetroDialogSettings() {
+					AffirmativeButtonText = "ОК",
+					NegativeButtonText = "Отмена"
+				};
+				var result = await viewModel.mainWindow.ShowMessageAsync("Подтверждение", "Вы действительно хотите отменить заявку №" + id + "?",
+					MessageDialogStyle.AffirmativeAndNegative, mySettings);
+				if (result == MessageDialogResult.Affirmative) {
+					DenyRequest();
+				}
+			}
 		}
-
+		private async void DenyRequest() {
+			try {
+				using (var client = new HttpClient()) {
+					client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
+					var resultContent = await client.GetStringAsync($"{viewModel.addres}/api/v1/{viewModel.mainWindow.mac}/" + id + "/cancel");
+					if (resultContent.Contains("Successfully")) {
+						if (viewModel.mainWindow.controller.IsOpen) {
+							await viewModel.mainWindow.controller.CloseAsync();
+						}
+						viewModel.mainWindow.Refresh();
+					}
+					else {
+						if (viewModel.mainWindow.controller.IsOpen) {
+							await viewModel.mainWindow.controller.CloseAsync();
+						}
+						_ = await viewModel.mainWindow.ShowMessageAsync("Ошибка", "Не получилось отменить заявку");
+					}
+				}
+			}
+			catch {
+				if (viewModel.mainWindow.controller.IsOpen) {
+					await viewModel.mainWindow.controller.CloseAsync();
+				}
+				_ = await viewModel.mainWindow.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
+			}
+		}
 		private void SendCommentButton_Click(object sender, RoutedEventArgs e) {
-
+			PostComment();
 		}
-
+		private async void PostComment() {
+			try {
+				using (var multipartFormContent = new MultipartFormDataContent())
+				using (var client = new HttpClient()) {
+					client.BaseAddress = new Uri(viewModel.addres);
+					client.DefaultRequestHeaders.Add("Checker", viewModel.cheker);
+					multipartFormContent.Add(new StringContent(NewCommentInput.Text), "comment_text");
+					var result = await client.PostAsync($"{viewModel.addres}/api/v1/{viewModel.mainWindow.mac}/" + id + "/comment", multipartFormContent);
+					var resultContent = await result.Content.ReadAsStringAsync();
+					if (resultContent.Contains("Successfully")) {
+						if (viewModel.mainWindow.controller.IsOpen) {
+							await viewModel.mainWindow.controller.CloseAsync();
+						}
+						viewModel.mainWindow.Refresh();
+					}
+					else {
+						if (viewModel.mainWindow.controller.IsOpen) {
+							await viewModel.mainWindow.controller.CloseAsync();
+						}
+						_ = await viewModel.mainWindow.ShowMessageAsync("Ошибка", "Не получилось создать комментарий");
+					}
+				}
+			}
+			catch {
+				if (viewModel.mainWindow.controller.IsOpen) {
+					await viewModel.mainWindow.controller.CloseAsync();
+				}
+				_ = await viewModel.mainWindow.ShowMessageAsync("Ошибка", "Отсутствует соединение с сервером");
+			}
+		}
 		public async Task RefreshRequestInfo(int id) {
 			try {
 				var client = new HttpClient();

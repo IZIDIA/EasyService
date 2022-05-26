@@ -65,7 +65,6 @@ namespace EasyService.Views {
 				}
 			}
 		}
-
 		private void AnonimInput_Toggled(object sender, RoutedEventArgs e) {
 			var toggleSwitch = sender as ToggleSwitch;
 			if (toggleSwitch != null) {
@@ -87,11 +86,9 @@ namespace EasyService.Views {
 				}
 			}
 		}
-
 		private void RadioInput_Click(object sender, RoutedEventArgs e) {
 			WorkTimeInputPanel.Visibility = (bool)RadioInputOne.IsChecked ? Visibility.Collapsed : Visibility.Visible;
 		}
-
 		private void PasswordCheck_Click(object sender, RoutedEventArgs e) {
 			var PasswordCheck = sender as CheckBox;
 			if ((bool)PasswordCheck.IsChecked) {
@@ -102,7 +99,6 @@ namespace EasyService.Views {
 				PasswordPanel.Visibility = Visibility.Collapsed;
 			}
 		}
-
 		private async void SendRequestButton_Click(object sender, RoutedEventArgs e) {
 			if (CheckFormInputs()) {
 				if (!AnonimInput.IsOn && !IsValidEmailAddress(EmailInput.Text)) {
@@ -134,7 +130,6 @@ namespace EasyService.Views {
 				_ = await viewModel.mainWindow.ShowMessageAsync("Предупреждение", "Заполните все обязательные поля");
 			}
 		}
-
 		private async void PostRequestInfo(string solution_with_me) {
 			try {
 				using (var multipartFormContent = new MultipartFormDataContent())
@@ -235,7 +230,6 @@ namespace EasyService.Views {
 				&& TitleInput.Text.Length != 0
 				&& MessageInput.Text.Length != 0;
 		}
-
 		private void SavePersonDataInput_Toggled(object sender, RoutedEventArgs e) {
 			if (!SavePersonDataInput.IsOn) {
 				if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "PersonalData.json")) {
