@@ -65,6 +65,7 @@ namespace EasyService {
 						case "В обработке":
 							Requests.Add(new RequestInfo {
 								Id = item.Id,
+								Status = item.Status,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "ClipboardTextClockOutline",
@@ -74,6 +75,7 @@ namespace EasyService {
 						case "В работе":
 							Requests.Add(new RequestInfo {
 								Id = item.Id,
+								Status = item.Status,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "ProgressWrench",
@@ -83,6 +85,7 @@ namespace EasyService {
 						case "Завершено":
 							Requests.Add(new RequestInfo {
 								Id = item.Id,
+								Status = item.Status,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "CheckCircleOutline",
@@ -92,6 +95,7 @@ namespace EasyService {
 						case "Отменено":
 							Requests.Add(new RequestInfo {
 								Id = item.Id,
+								Status = item.Status,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "CloseCircleOutline",
@@ -101,6 +105,7 @@ namespace EasyService {
 						default:
 							Requests.Add(new RequestInfo {
 								Id = item.Id,
+								Status = item.Status,
 								IdName = "Заявка №" + item.Id,
 								CreatedAt = item.Topic,
 								Icon = "HelpCircleOutline",
@@ -159,17 +164,17 @@ namespace EasyService {
 				var requestInfo = (RequestInfo)RequestsList.SelectedItem;
 				controller = await this.ShowProgressAsync("Загрузка заявки", "Пожалуйста подождите...");
 				controller.SetIndeterminate();
-				mainContentControl.Content = new RequestShow(viewModel, requestInfo.Id);
+				mainContentControl.Content = new RequestShow(viewModel, requestInfo.Id, requestInfo.Status);
 				Button_Create.Visibility = Visibility.Hidden;
 				Button_Close.Visibility = Visibility.Visible;
 			}
 		}
-		private void Button_Refresh_Click(object sender, RoutedEventArgs e) {
-			Refresh();
+		private async void Button_Refresh_Click(object sender, RoutedEventArgs e) {
+			await Refresh();
 		}
-		public async void Refresh() {
+		public async Task Refresh(bool needAgainLoadRequestpage = true) {
 			var selectedItemIndex = RequestsList.SelectedIndex;
-			if (mainContentControl.Content is RequestShow && RequestsList.SelectedItem != null) {
+			if (mainContentControl.Content is RequestShow && RequestsList.SelectedItem != null && needAgainLoadRequestpage) {
 				LoadRequestPage();
 			}
 			await RefreshWelcomePageAndRequestsList();

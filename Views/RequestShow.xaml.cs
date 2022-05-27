@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,21 +24,29 @@ namespace EasyService.Views {
 		private readonly MainWindowViewModel viewModel;
 		private RequestInfo requestInfo;
 		private readonly int id;
-		public RequestShow(MainWindowViewModel viewModel, int _id) {
+		private readonly string oldStatus;
+		public RequestShow(MainWindowViewModel viewModel, int _id, string _status) {
 			InitializeComponent();
 			MainGrid.Visibility = Visibility.Collapsed;
 			this.viewModel = viewModel;
 			id = _id;
+			oldStatus = _status;
 			LaunchApp(id);
 		}
 		public async void LaunchApp(int id) {
 			await RefreshRequestInfo(id);
+
 			MainGrid.Visibility = Visibility.Visible;
 			if (requestInfo.Status != "Отменено") {
 				CancelPanel.Visibility = Visibility.Visible;
 			}
-			if (viewModel.mainWindow.controller.IsOpen) {
-				await viewModel.mainWindow.controller.CloseAsync();
+			if (requestInfo.Status != oldStatus) {
+				await viewModel.mainWindow.Refresh(false);
+			}
+			else {
+				if (viewModel.mainWindow.controller.IsOpen) {
+					await viewModel.mainWindow.controller.CloseAsync();
+				}
 			}
 			CommentsInput.ScrollToEnd();
 		}
@@ -68,7 +77,7 @@ namespace EasyService.Views {
 						if (viewModel.mainWindow.controller.IsOpen) {
 							await viewModel.mainWindow.controller.CloseAsync();
 						}
-						viewModel.mainWindow.Refresh();
+						await viewModel.mainWindow.Refresh();
 					}
 					else {
 						if (viewModel.mainWindow.controller.IsOpen) {
@@ -101,7 +110,7 @@ namespace EasyService.Views {
 						if (viewModel.mainWindow.controller.IsOpen) {
 							await viewModel.mainWindow.controller.CloseAsync();
 						}
-						viewModel.mainWindow.Refresh();
+						await viewModel.mainWindow.Refresh();
 					}
 					else {
 						if (viewModel.mainWindow.controller.IsOpen) {
